@@ -14,7 +14,7 @@ Global.GelatekHubConfig = {
 	["Anti Void Offset"] = 75
 }
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/UILibrary.lua"))()
-local Main = Library:Create("Gelatek Hub - V1.0.5", "Thanks for using the hub! :3", Color3.fromRGB(159, 1, 198))
+local Main = Library:Create("Gelatek Hub", "Revamped by Ernad <3", Color3.fromRGB(159, 1, 198))
 local UserInputService = game:GetService("UserInputService")
 if UserInputService.TouchEnabled then
 	game.StarterGui:SetCore("SendNotification",{
