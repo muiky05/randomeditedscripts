@@ -5977,13 +5977,6 @@ local funnyfunction
 local funnyattacking = "yes"
 local Hat = Character:FindFirstChild("MeshPartAccessory")
 local HatAlt = Character:FindFirstChild("Sword")
-local HatAltTwo = Character:FindFirstChild("Reaper Scythe")
-if HatAltTwo and HatAlt then
-	HatAltTwo = nil
-end
-if HatAltTwo and Hat then
-	HatAltTwo = nil
-end 
 if HatAlt and Hat then
 	HatAlt = nil
 end
@@ -6001,14 +5994,7 @@ if HatAlt then
 		HatAlt.Handle.Velocity = Vector3.new()
 	end))
 end
-if HatAltTwo then
-	HatAltTwo.Handle:BreakJoints()
-	table.insert(Events, game:GetService("RunService").PostSimulation:Connect(function()
-		HatAltTwo.Handle.CFrame = weaponweld.Parent.CFrame * CFrame.new(-2.2, -0.17, 0) * CFrame.Angles(0,0,math.rad(-45))
-		HatAltTwo.Handle.Velocity = Vector3.new()
-	end))
-end
-if Hat or HatAlt or HatAltTwo then
+if Hat or HatAlt then
 	for i,v in pairs(Model0:GetChildren()) do
 		if v:IsA("BasePart") then
 			v.Transparency = 1
