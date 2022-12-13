@@ -2,21 +2,6 @@ local Global = (getgenv and getgenv()) or shared
 if not isfile and isfolder and writefile and (getsynasset or getcustomasset) then
     warn("Exploit will not run custom songs")
 end
-if isfile and isfolder and writefile and (getsynasset or getcustomasset) and (not isfolder("GelatekHub")) then
-	local Bindable = Instance.new("BindableFunction")
-	local function Copy(e)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/packages/AudioPack.lua"))()
-		Bindable:Destroy()
-	end
-	Bindable.OnInvoke = Copy
-	game.StarterGui:SetCore("SendNotification",{
-		Title = "Audio Package (45 MB) ";
-		Text = "Click here to download audio package for every script automatically, otherwise ignore";
-		Duration = 10;
-		Callback = Bindable,
-		Button1 = "Download Data";
-	})
-end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/packages/FunctionPack.lua"))()
 Global.GelatekHubConfig = {
 	["Permanent Death"] = false,
@@ -34,7 +19,7 @@ local UserInputService = game:GetService("UserInputService")
 if UserInputService.TouchEnabled then
 	game.StarterGui:SetCore("SendNotification",{
 		Title = "MOBILE USER ALERT!";
-		Text = "This hub was never really meant to support mobile executors for a reason, check discord for info.";
+		Text = "This hub does not support mobile executors. It is a limitation of exploits.";
 		Duration = 5
 	})
 end
