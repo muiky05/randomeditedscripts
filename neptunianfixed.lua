@@ -5978,11 +5978,14 @@ local funnyattacking = "yes"
 local Hat = Character:FindFirstChild("MeshPartAccessory")
 local HatAlt = Character:FindFirstChild("Sword")
 local HatAlt2 = Character:FindFirstChild("Reaper Scythe")
-if HatAlt and Hat then
-	HatAlt = nil
+if HatAlt2 and HatAlt then
+	HatAlt2 = nil
 end
 if HatAlt2 and Hat then
 	HatAlt2 = nil
+end 
+if HatAlt and Hat then
+	HatAlt = nil
 end
 if Hat then
 	Hat.Handle:BreakJoints()
