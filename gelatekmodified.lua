@@ -2,7 +2,7 @@ local Global = (getgenv and getgenv()) or shared
 if not isfile and isfolder and writefile and (getsynasset or getcustomasset) then
     warn("Exploit will not run custom songs")
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/packages/FunctionPack.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/FunctionPack.lua"))()
 Global.GelatekHubConfig = {
 	["Permanent Death"] = false,
 	["Torso Fling"] = false,
@@ -13,7 +13,7 @@ Global.GelatekHubConfig = {
 	["Anti Void"] = false,
 	["Anti Void Offset"] = 75
 }
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/UILibrary.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/UILibrary.lua"))()
 local Main = Library:Create("Gelatek Hub", "Improved by Ernad <3", Color3.fromRGB(159, 1, 198))
 local UserInputService = game:GetService("UserInputService")
 if UserInputService.TouchEnabled then
@@ -38,7 +38,7 @@ local function BetterStopScript()
 end
 
 Reanimate:MakeButton("Reanimate", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/Reanimate.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/Reanimate.lua"))()
 end)
 Reanimate:MakeToggle("Permanent Death", function(Bool)
 	Global.GelatekHubConfig["Permanent Death"] = Bool
@@ -131,8 +131,11 @@ do -- [[ Animations ]] --
 end
 
 do -- [[ Scripts ]] --
+	HatScripts:MakeButton("Neptunian V", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/neptunianfixed.lua"))()
+	end)
 	HatScripts:MakeButton("Dual Ultima", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/DualUltima.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/DualUltima.lua"))()
 	end)
 	HatScripts:MakeButton("The Hotline", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/TheHotline.lua"))()
@@ -142,9 +145,6 @@ do -- [[ Scripts ]] --
 	end)
 	HatScripts:MakeButton("Carnage", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/TheCarnage.lua"))()
-	end)
-	HatScripts:MakeButton("Neptunian V", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/neptunianfixed.lua"))()
 	end)
 	HatScripts:MakeButton("Zenith Battle Rifle-70", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/ZenithAttackRifle.lua"))()
@@ -205,7 +205,7 @@ do -- [[ Hats ]] --
 		setclipboard("5134896593,5410674378")
 	end)
 	Hats:MakeButton("Copy Neptunian V Hat", function()
-		setclipboard("4506945409 OR 9685941374 (DO NOT EQUIP BOTH)")
+		setclipboard("4506945409 or 9685941374")
 	end)
 	Hats:MakeButton("Copy Zenith Rifle Hats", function()
 		setclipboard("4962510729,4962455546")
