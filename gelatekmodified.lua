@@ -135,7 +135,7 @@ do -- [[ Scripts ]] --
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/neptunianfixed.lua"))()
 	end)
 	HatScripts:MakeButton("Dual Ultima", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/DualUltima.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/DualUltima.lua"))()
 	end)
 	HatScripts:MakeButton("The Hotline", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/TheHotline.lua"))()
