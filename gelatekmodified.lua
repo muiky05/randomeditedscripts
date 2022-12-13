@@ -2,7 +2,7 @@ local Global = (getgenv and getgenv()) or shared
 if not isfile and isfolder and writefile and (getsynasset or getcustomasset) then
     warn("Exploit will not run custom songs")
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/FunctionPack.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/packages/FunctionPack.lua"))()
 Global.GelatekHubConfig = {
 	["Permanent Death"] = false,
 	["Torso Fling"] = false,
@@ -13,13 +13,13 @@ Global.GelatekHubConfig = {
 	["Anti Void"] = false,
 	["Anti Void Offset"] = 75
 }
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/UILibrary.lua"))()
-local Main = Library:Create("Gelatek Hub", "Improved by Ernad <3", Color3.fromRGB(159, 1, 198))
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/UILibrary.lua"))()
+local Main = Library:Create("Gelatek Hub", "Revamped by Ernad <3", Color3.fromRGB(159, 1, 198))
 local UserInputService = game:GetService("UserInputService")
 if UserInputService.TouchEnabled then
 	game.StarterGui:SetCore("SendNotification",{
-		Title = "MOBILE USER ALERT!";
-		Text = "This hub does not support mobile executors. It is a limitation of exploits.";
+		Title = "MOBILE USER ALERT! ";
+		Text = "This hub was never really meant to support mobile executors for a reasons, check discord for info.";
 		Duration = 5
 	})
 end
@@ -38,7 +38,7 @@ local function BetterStopScript()
 end
 
 Reanimate:MakeButton("Reanimate", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/Reanimate.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/Reanimate.lua"))()
 end)
 Reanimate:MakeToggle("Permanent Death", function(Bool)
 	Global.GelatekHubConfig["Permanent Death"] = Bool
@@ -135,7 +135,7 @@ do -- [[ Scripts ]] --
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/neptunianfixed.lua"))()
 	end)
 	HatScripts:MakeButton("Dual Ultima", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/main/DualUltima.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/DualUltima.lua"))()
 	end)
 	HatScripts:MakeButton("The Hotline", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/TheHotline.lua"))()
@@ -242,11 +242,6 @@ do -- [[ Credits ]] --
 	Credits:MakeLabel("Anim ID Player: Gelatek / Derek")
 	Credits:MakeLabel("Converts: Gelatek / Ernad")
 end
-
-
-
-
-
 
 
 
