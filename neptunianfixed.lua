@@ -1,4 +1,4 @@
-warn[[Absolutely. Created by NoobyGames12]] 
+warn[[Absolutely. Created by NoobyGames12, Edited by Ernad; removed exessive parts of script and modified swords]] 
 local Global = (getgenv and getgenv()) or shared
 if game:GetService("Players").LocalPlayer.Character.Name ~= "GelatekReanimate" then
 	error("Not Reanimated")
