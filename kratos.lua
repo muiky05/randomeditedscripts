@@ -1832,7 +1832,7 @@ Part191.Size = Vector3.new(0.210000038, 0.200000003, 0.285374999)
 Part191.Anchored = true
 Part191.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part191.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part191.BrickColor = BrickColor.new("Royal purple")
+Part191.BrickColor = BrickColor.new("Bright red")
 Part191.CanCollide = false
 Part191.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part191.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -1840,7 +1840,7 @@ Part191.Material = Enum.Material.Neon
 Part191.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part191.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part191.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part191.brickColor = BrickColor.new("Royal purple")
+Part191.brickColor = BrickColor.new("Bright red")
 SpecialMesh192.Parent = Part191
 SpecialMesh192.Scale = Vector3.new(0.5, 0.300000012, 0.5)
 SpecialMesh192.MeshType = Enum.MeshType.Wedge
@@ -1878,7 +1878,7 @@ Part195.Size = Vector3.new(0.421999991, 0.200000003, 0.280375004)
 Part195.Anchored = true
 Part195.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part195.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part195.BrickColor = BrickColor.new("Royal purple")
+Part195.BrickColor = BrickColor.new("Bright red")
 Part195.CanCollide = false
 Part195.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part195.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -1886,7 +1886,7 @@ Part195.Material = Enum.Material.Neon
 Part195.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part195.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part195.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part195.brickColor = BrickColor.new("Royal purple")
+Part195.brickColor = BrickColor.new("Bright red")
 SpecialMesh196.Parent = Part195
 SpecialMesh196.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh196.MeshType = Enum.MeshType.Wedge
@@ -1901,7 +1901,7 @@ Part197.Size = Vector3.new(0.643000007, 0.200000003, 0.280375004)
 Part197.Anchored = true
 Part197.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part197.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part197.BrickColor = BrickColor.new("Royal purple")
+Part197.BrickColor = BrickColor.new("Bright red")
 Part197.CanCollide = false
 Part197.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part197.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -1909,7 +1909,7 @@ Part197.Material = Enum.Material.Neon
 Part197.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part197.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part197.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part197.brickColor = BrickColor.new("Royal purple")
+Part197.brickColor = BrickColor.new("Bright red")
 SpecialMesh198.Parent = Part197
 SpecialMesh198.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh198.MeshType = Enum.MeshType.Wedge
@@ -2062,7 +2062,7 @@ Part211.Size = Vector3.new(0.49000001, 0.200000003, 0.290374994)
 Part211.Anchored = true
 Part211.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part211.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part211.BrickColor = BrickColor.new("Royal purple")
+Part211.BrickColor = BrickColor.new("Bright red")
 Part211.CanCollide = false
 Part211.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part211.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2070,7 +2070,7 @@ Part211.Material = Enum.Material.Neon
 Part211.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part211.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part211.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part211.brickColor = BrickColor.new("Royal purple")
+Part211.brickColor = BrickColor.new("Bright red")
 SpecialMesh212.Parent = Part211
 SpecialMesh212.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh212.MeshType = Enum.MeshType.Wedge
@@ -2131,7 +2131,7 @@ Part217.Size = Vector3.new(0.496000022, 0.200000003, 0.280375004)
 Part217.Anchored = true
 Part217.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part217.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part217.BrickColor = BrickColor.new("Royal purple")
+Part217.BrickColor = BrickColor.new("Bright red")
 Part217.CanCollide = false
 Part217.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part217.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2139,7 +2139,7 @@ Part217.Material = Enum.Material.Neon
 Part217.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part217.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part217.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part217.brickColor = BrickColor.new("Royal purple")
+Part217.brickColor = BrickColor.new("Bright red")
 SpecialMesh218.Parent = Part217
 SpecialMesh218.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh218.MeshType = Enum.MeshType.Wedge
@@ -2453,7 +2453,7 @@ Part245.Size = Vector3.new(0.453000009, 0.200000003, 0.280375004)
 Part245.Anchored = true
 Part245.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part245.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part245.BrickColor = BrickColor.new("Royal purple")
+Part245.BrickColor = BrickColor.new("Bright red")
 Part245.CanCollide = false
 Part245.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part245.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2461,7 +2461,7 @@ Part245.Material = Enum.Material.Neon
 Part245.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part245.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part245.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part245.brickColor = BrickColor.new("Royal purple")
+Part245.brickColor = BrickColor.new("Bright red")
 SpecialMesh246.Parent = Part245
 SpecialMesh246.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh246.MeshType = Enum.MeshType.Wedge
@@ -2499,7 +2499,7 @@ Part249.Size = Vector3.new(0.496000022, 0.200000003, 0.280375004)
 Part249.Anchored = true
 Part249.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part249.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part249.BrickColor = BrickColor.new("Royal purple")
+Part249.BrickColor = BrickColor.new("Bright red")
 Part249.CanCollide = false
 Part249.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part249.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2507,7 +2507,7 @@ Part249.Material = Enum.Material.Neon
 Part249.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part249.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part249.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part249.brickColor = BrickColor.new("Royal purple")
+Part249.brickColor = BrickColor.new("Bright red")
 SpecialMesh250.Parent = Part249
 SpecialMesh250.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh250.MeshType = Enum.MeshType.Wedge
@@ -2591,7 +2591,7 @@ Part257.Size = Vector3.new(0.940000057, 0.200000003, 0.285374999)
 Part257.Anchored = true
 Part257.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part257.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part257.BrickColor = BrickColor.new("Royal purple")
+Part257.BrickColor = BrickColor.new("Bright red")
 Part257.CanCollide = false
 Part257.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part257.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2599,7 +2599,7 @@ Part257.Material = Enum.Material.Neon
 Part257.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part257.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part257.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part257.brickColor = BrickColor.new("Royal purple")
+Part257.brickColor = BrickColor.new("Bright red")
 SpecialMesh258.Parent = Part257
 SpecialMesh258.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh258.MeshType = Enum.MeshType.Wedge
@@ -2614,7 +2614,7 @@ Part259.Size = Vector3.new(0.496000022, 0.200000003, 0.280375004)
 Part259.Anchored = true
 Part259.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part259.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part259.BrickColor = BrickColor.new("Royal purple")
+Part259.BrickColor = BrickColor.new("Bright red")
 Part259.CanCollide = false
 Part259.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part259.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2622,7 +2622,7 @@ Part259.Material = Enum.Material.Neon
 Part259.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part259.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part259.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part259.brickColor = BrickColor.new("Royal purple")
+Part259.brickColor = BrickColor.new("Bright red")
 SpecialMesh260.Parent = Part259
 SpecialMesh260.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh260.MeshType = Enum.MeshType.Wedge
@@ -2637,7 +2637,7 @@ Part261.Size = Vector3.new(0.940000057, 0.200000003, 0.285374999)
 Part261.Anchored = true
 Part261.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part261.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part261.BrickColor = BrickColor.new("Royal purple")
+Part261.BrickColor = BrickColor.new("Bright red")
 Part261.CanCollide = false
 Part261.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part261.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2645,7 +2645,7 @@ Part261.Material = Enum.Material.Neon
 Part261.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part261.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part261.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part261.brickColor = BrickColor.new("Royal purple")
+Part261.brickColor = BrickColor.new("Bright red")
 SpecialMesh262.Parent = Part261
 SpecialMesh262.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh262.MeshType = Enum.MeshType.Wedge
@@ -2660,7 +2660,7 @@ Part263.Size = Vector3.new(0.288000047, 0.200000003, 0.27837503)
 Part263.Anchored = true
 Part263.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part263.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part263.BrickColor = BrickColor.new("Royal purple")
+Part263.BrickColor = BrickColor.new("Bright red")
 Part263.CanCollide = false
 Part263.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part263.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2668,7 +2668,7 @@ Part263.Material = Enum.Material.Neon
 Part263.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part263.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part263.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part263.brickColor = BrickColor.new("Royal purple")
+Part263.brickColor = BrickColor.new("Bright red")
 SpecialMesh264.Parent = Part263
 SpecialMesh264.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh264.MeshType = Enum.MeshType.Wedge
@@ -2752,7 +2752,7 @@ Part271.Size = Vector3.new(0.496000022, 0.200000003, 0.280375004)
 Part271.Anchored = true
 Part271.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part271.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part271.BrickColor = BrickColor.new("Royal purple")
+Part271.BrickColor = BrickColor.new("Bright red")
 Part271.CanCollide = false
 Part271.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part271.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2760,7 +2760,7 @@ Part271.Material = Enum.Material.Neon
 Part271.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part271.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part271.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part271.brickColor = BrickColor.new("Royal purple")
+Part271.brickColor = BrickColor.new("Bright red")
 SpecialMesh272.Parent = Part271
 SpecialMesh272.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh272.MeshType = Enum.MeshType.Wedge
@@ -2775,7 +2775,7 @@ Part273.Size = Vector3.new(1.78499997, 0.200000003, 0.301375002)
 Part273.Anchored = true
 Part273.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part273.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part273.BrickColor = BrickColor.new("Royal purple")
+Part273.BrickColor = BrickColor.new("Bright red")
 Part273.CanCollide = false
 Part273.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part273.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2783,7 +2783,7 @@ Part273.Material = Enum.Material.Neon
 Part273.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part273.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part273.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part273.brickColor = BrickColor.new("Royal purple")
+Part273.brickColor = BrickColor.new("Bright red")
 SpecialMesh274.Parent = Part273
 SpecialMesh274.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh274.MeshType = Enum.MeshType.Wedge
@@ -2844,7 +2844,7 @@ Part279.Size = Vector3.new(0.49000001, 0.200000003, 0.290374994)
 Part279.Anchored = true
 Part279.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part279.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part279.BrickColor = BrickColor.new("Royal purple")
+Part279.BrickColor = BrickColor.new("Bright red")
 Part279.CanCollide = false
 Part279.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part279.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2852,7 +2852,7 @@ Part279.Material = Enum.Material.Neon
 Part279.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part279.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part279.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part279.brickColor = BrickColor.new("Royal purple")
+Part279.brickColor = BrickColor.new("Bright red")
 SpecialMesh280.Parent = Part279
 SpecialMesh280.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh280.MeshType = Enum.MeshType.Wedge
@@ -2959,7 +2959,7 @@ Part289.Size = Vector3.new(0.496000022, 0.200000003, 0.280375004)
 Part289.Anchored = true
 Part289.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part289.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part289.BrickColor = BrickColor.new("Royal purple")
+Part289.BrickColor = BrickColor.new("Bright red")
 Part289.CanCollide = false
 Part289.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part289.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -2967,7 +2967,7 @@ Part289.Material = Enum.Material.Neon
 Part289.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part289.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part289.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part289.brickColor = BrickColor.new("Royal purple")
+Part289.brickColor = BrickColor.new("Bright red")
 SpecialMesh290.Parent = Part289
 SpecialMesh290.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh290.MeshType = Enum.MeshType.Wedge
@@ -3005,7 +3005,7 @@ Part293.Size = Vector3.new(1.78499997, 0.200000003, 0.301375002)
 Part293.Anchored = true
 Part293.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part293.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part293.BrickColor = BrickColor.new("Royal purple")
+Part293.BrickColor = BrickColor.new("Bright red")
 Part293.CanCollide = false
 Part293.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part293.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3013,7 +3013,7 @@ Part293.Material = Enum.Material.Neon
 Part293.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part293.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part293.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part293.brickColor = BrickColor.new("Royal purple")
+Part293.brickColor = BrickColor.new("Bright red")
 SpecialMesh294.Parent = Part293
 SpecialMesh294.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh294.MeshType = Enum.MeshType.Wedge
@@ -3166,7 +3166,7 @@ Part307.Size = Vector3.new(0.200000003, 0.217000008, 0.200375021)
 Part307.Anchored = true
 Part307.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part307.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part307.BrickColor = BrickColor.new("Royal purple")
+Part307.BrickColor = BrickColor.new("Bright red")
 Part307.CanCollide = false
 Part307.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part307.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3174,7 +3174,7 @@ Part307.Material = Enum.Material.Neon
 Part307.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part307.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part307.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part307.brickColor = BrickColor.new("Royal purple")
+Part307.brickColor = BrickColor.new("Bright red")
 SpecialMesh308.Parent = Part307
 SpecialMesh308.Scale = Vector3.new(0.560000002, 0.200000003, 0.600000024)
 SpecialMesh308.MeshType = Enum.MeshType.Brick
@@ -3235,7 +3235,7 @@ Part313.Size = Vector3.new(0.200000003, 0.217000008, 0.200375021)
 Part313.Anchored = true
 Part313.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part313.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part313.BrickColor = BrickColor.new("Royal purple")
+Part313.BrickColor = BrickColor.new("Bright red")
 Part313.CanCollide = false
 Part313.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part313.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3243,7 +3243,7 @@ Part313.Material = Enum.Material.Neon
 Part313.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part313.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part313.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part313.brickColor = BrickColor.new("Royal purple")
+Part313.brickColor = BrickColor.new("Bright red")
 SpecialMesh314.Parent = Part313
 SpecialMesh314.Scale = Vector3.new(0.560000002, 0.200000003, 0.600000024)
 SpecialMesh314.MeshType = Enum.MeshType.Brick
@@ -3304,7 +3304,7 @@ Part319.Size = Vector3.new(0.200000003, 0.217000008, 0.200375021)
 Part319.Anchored = true
 Part319.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part319.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part319.BrickColor = BrickColor.new("Royal purple")
+Part319.BrickColor = BrickColor.new("Bright red")
 Part319.CanCollide = false
 Part319.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part319.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3312,7 +3312,7 @@ Part319.Material = Enum.Material.Neon
 Part319.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part319.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part319.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part319.brickColor = BrickColor.new("Royal purple")
+Part319.brickColor = BrickColor.new("Bright red")
 SpecialMesh320.Parent = Part319
 SpecialMesh320.Scale = Vector3.new(0.560000002, 0.200000003, 0.600000024)
 SpecialMesh320.MeshType = Enum.MeshType.Brick
@@ -3465,7 +3465,7 @@ Part333.Size = Vector3.new(0.200000003, 0.217000008, 0.200375021)
 Part333.Anchored = true
 Part333.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part333.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part333.BrickColor = BrickColor.new("Royal purple")
+Part333.BrickColor = BrickColor.new("Bright red")
 Part333.CanCollide = false
 Part333.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part333.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3473,7 +3473,7 @@ Part333.Material = Enum.Material.Neon
 Part333.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part333.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part333.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part333.brickColor = BrickColor.new("Royal purple")
+Part333.brickColor = BrickColor.new("Bright red")
 SpecialMesh334.Parent = Part333
 SpecialMesh334.Scale = Vector3.new(0.560000002, 0.200000003, 0.600000024)
 SpecialMesh334.MeshType = Enum.MeshType.Brick
@@ -3580,7 +3580,7 @@ Part343.Size = Vector3.new(0.405000031, 0.200000003, 0.280375004)
 Part343.Anchored = true
 Part343.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part343.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part343.BrickColor = BrickColor.new("Royal purple")
+Part343.BrickColor = BrickColor.new("Bright red")
 Part343.CanCollide = false
 Part343.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part343.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3588,7 +3588,7 @@ Part343.Material = Enum.Material.Neon
 Part343.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part343.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part343.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part343.brickColor = BrickColor.new("Royal purple")
+Part343.brickColor = BrickColor.new("Bright red")
 SpecialMesh344.Parent = Part343
 SpecialMesh344.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh344.MeshType = Enum.MeshType.Wedge
@@ -3695,7 +3695,7 @@ Part353.Size = Vector3.new(0.405000031, 0.200000003, 0.280375004)
 Part353.Anchored = true
 Part353.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part353.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part353.BrickColor = BrickColor.new("Royal purple")
+Part353.BrickColor = BrickColor.new("Bright red")
 Part353.CanCollide = false
 Part353.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part353.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3703,7 +3703,7 @@ Part353.Material = Enum.Material.Neon
 Part353.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part353.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part353.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part353.brickColor = BrickColor.new("Royal purple")
+Part353.brickColor = BrickColor.new("Bright red")
 SpecialMesh354.Parent = Part353
 SpecialMesh354.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh354.MeshType = Enum.MeshType.Wedge
@@ -3718,7 +3718,7 @@ Part355.Size = Vector3.new(0.453000009, 0.200000003, 0.280375004)
 Part355.Anchored = true
 Part355.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part355.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part355.BrickColor = BrickColor.new("Royal purple")
+Part355.BrickColor = BrickColor.new("Bright red")
 Part355.CanCollide = false
 Part355.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part355.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3726,7 +3726,7 @@ Part355.Material = Enum.Material.Neon
 Part355.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part355.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part355.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part355.brickColor = BrickColor.new("Royal purple")
+Part355.brickColor = BrickColor.new("Bright red")
 SpecialMesh356.Parent = Part355
 SpecialMesh356.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh356.MeshType = Enum.MeshType.Wedge
@@ -3902,7 +3902,7 @@ Part371.Size = Vector3.new(0.275000006, 0.204124942, 0.464375019)
 Part371.Anchored = true
 Part371.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part371.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part371.BrickColor = BrickColor.new("Royal purple")
+Part371.BrickColor = BrickColor.new("Bright red")
 Part371.CanCollide = false
 Part371.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part371.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -3910,7 +3910,7 @@ Part371.Material = Enum.Material.Neon
 Part371.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part371.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part371.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part371.brickColor = BrickColor.new("Royal purple")
+Part371.brickColor = BrickColor.new("Bright red")
 SpecialMesh372.Parent = Part371
 SpecialMesh372.Scale = Vector3.new(0.524999976, 1.04999995, 0.800000012)
 SpecialMesh372.MeshType = Enum.MeshType.Brick
@@ -3994,7 +3994,7 @@ Part379.Size = Vector3.new(0.210000038, 0.200000003, 0.285374999)
 Part379.Anchored = true
 Part379.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part379.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part379.BrickColor = BrickColor.new("Royal purple")
+Part379.BrickColor = BrickColor.new("Bright red")
 Part379.CanCollide = false
 Part379.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part379.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4002,7 +4002,7 @@ Part379.Material = Enum.Material.Neon
 Part379.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part379.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part379.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part379.brickColor = BrickColor.new("Royal purple")
+Part379.brickColor = BrickColor.new("Bright red")
 SpecialMesh380.Parent = Part379
 SpecialMesh380.Scale = Vector3.new(0.5, 0.300000012, 0.5)
 SpecialMesh380.MeshType = Enum.MeshType.Wedge
@@ -4201,7 +4201,7 @@ Part397.Size = Vector3.new(1.625, 0.200000003, 0.296375006)
 Part397.Anchored = true
 Part397.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part397.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part397.BrickColor = BrickColor.new("Royal purple")
+Part397.BrickColor = BrickColor.new("Bright red")
 Part397.CanCollide = false
 Part397.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part397.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4209,7 +4209,7 @@ Part397.Material = Enum.Material.Neon
 Part397.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part397.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part397.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part397.brickColor = BrickColor.new("Royal purple")
+Part397.brickColor = BrickColor.new("Bright red")
 SpecialMesh398.Parent = Part397
 SpecialMesh398.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh398.MeshType = Enum.MeshType.Wedge
@@ -4247,7 +4247,7 @@ Part401.Size = Vector3.new(0.288000047, 0.200000003, 0.27837503)
 Part401.Anchored = true
 Part401.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part401.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part401.BrickColor = BrickColor.new("Royal purple")
+Part401.BrickColor = BrickColor.new("Bright red")
 Part401.CanCollide = false
 Part401.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part401.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4255,7 +4255,7 @@ Part401.Material = Enum.Material.Neon
 Part401.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part401.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part401.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part401.brickColor = BrickColor.new("Royal purple")
+Part401.brickColor = BrickColor.new("Bright red")
 SpecialMesh402.Parent = Part401
 SpecialMesh402.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh402.MeshType = Enum.MeshType.Wedge
@@ -4293,7 +4293,7 @@ Part405.Size = Vector3.new(1.625, 0.200000003, 0.296375006)
 Part405.Anchored = true
 Part405.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part405.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part405.BrickColor = BrickColor.new("Royal purple")
+Part405.BrickColor = BrickColor.new("Bright red")
 Part405.CanCollide = false
 Part405.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part405.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4301,7 +4301,7 @@ Part405.Material = Enum.Material.Neon
 Part405.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part405.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part405.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part405.brickColor = BrickColor.new("Royal purple")
+Part405.brickColor = BrickColor.new("Bright red")
 SpecialMesh406.Parent = Part405
 SpecialMesh406.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh406.MeshType = Enum.MeshType.Wedge
@@ -4431,7 +4431,7 @@ Part417.Size = Vector3.new(0.275000006, 0.320124894, 0.316374987)
 Part417.Anchored = true
 Part417.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part417.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part417.BrickColor = BrickColor.new("Royal purple")
+Part417.BrickColor = BrickColor.new("Bright red")
 Part417.CanCollide = false
 Part417.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part417.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4439,7 +4439,7 @@ Part417.Material = Enum.Material.Neon
 Part417.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part417.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part417.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part417.brickColor = BrickColor.new("Royal purple")
+Part417.brickColor = BrickColor.new("Bright red")
 SpecialMesh418.Parent = Part417
 SpecialMesh418.Scale = Vector3.new(0.457500011, 1, 1)
 SpecialMesh418.MeshType = Enum.MeshType.Cylinder
@@ -4592,7 +4592,7 @@ Part431.Size = Vector3.new(0.421999991, 0.200000003, 0.280375004)
 Part431.Anchored = true
 Part431.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part431.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part431.BrickColor = BrickColor.new("Royal purple")
+Part431.BrickColor = BrickColor.new("Bright red")
 Part431.CanCollide = false
 Part431.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part431.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4600,7 +4600,7 @@ Part431.Material = Enum.Material.Neon
 Part431.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part431.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part431.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part431.brickColor = BrickColor.new("Royal purple")
+Part431.brickColor = BrickColor.new("Bright red")
 SpecialMesh432.Parent = Part431
 SpecialMesh432.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh432.MeshType = Enum.MeshType.Wedge
@@ -4615,7 +4615,7 @@ Part433.Size = Vector3.new(0.643000007, 0.200000003, 0.280375004)
 Part433.Anchored = true
 Part433.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part433.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part433.BrickColor = BrickColor.new("Royal purple")
+Part433.BrickColor = BrickColor.new("Bright red")
 Part433.CanCollide = false
 Part433.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part433.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4623,7 +4623,7 @@ Part433.Material = Enum.Material.Neon
 Part433.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part433.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part433.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part433.brickColor = BrickColor.new("Royal purple")
+Part433.brickColor = BrickColor.new("Bright red")
 SpecialMesh434.Parent = Part433
 SpecialMesh434.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh434.MeshType = Enum.MeshType.Wedge
@@ -4638,7 +4638,7 @@ Part435.Size = Vector3.new(0.275000006, 0.23712492, 0.375375003)
 Part435.Anchored = true
 Part435.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part435.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part435.BrickColor = BrickColor.new("Royal purple")
+Part435.BrickColor = BrickColor.new("Bright red")
 Part435.CanCollide = false
 Part435.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part435.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4646,7 +4646,7 @@ Part435.Material = Enum.Material.Neon
 Part435.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part435.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part435.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part435.brickColor = BrickColor.new("Royal purple")
+Part435.brickColor = BrickColor.new("Bright red")
 SpecialMesh436.Parent = Part435
 SpecialMesh436.Scale = Vector3.new(0.524999976, 1.04999995, 0.800000012)
 SpecialMesh436.MeshType = Enum.MeshType.Brick
@@ -4661,7 +4661,7 @@ Part437.Size = Vector3.new(0.496000022, 0.200000003, 0.280375004)
 Part437.Anchored = true
 Part437.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part437.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part437.BrickColor = BrickColor.new("Royal purple")
+Part437.BrickColor = BrickColor.new("Bright red")
 Part437.CanCollide = false
 Part437.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part437.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4669,7 +4669,7 @@ Part437.Material = Enum.Material.Neon
 Part437.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part437.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part437.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part437.brickColor = BrickColor.new("Royal purple")
+Part437.brickColor = BrickColor.new("Bright red")
 SpecialMesh438.Parent = Part437
 SpecialMesh438.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh438.MeshType = Enum.MeshType.Wedge
@@ -4730,7 +4730,7 @@ Part443.Size = Vector3.new(0.643000007, 0.200000003, 0.280375004)
 Part443.Anchored = true
 Part443.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part443.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part443.BrickColor = BrickColor.new("Royal purple")
+Part443.BrickColor = BrickColor.new("Bright red")
 Part443.CanCollide = false
 Part443.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part443.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4738,7 +4738,7 @@ Part443.Material = Enum.Material.Neon
 Part443.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part443.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part443.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part443.brickColor = BrickColor.new("Royal purple")
+Part443.brickColor = BrickColor.new("Bright red")
 SpecialMesh444.Parent = Part443
 SpecialMesh444.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh444.MeshType = Enum.MeshType.Wedge
@@ -4799,7 +4799,7 @@ Part449.Size = Vector3.new(0.423000038, 0.200000003, 0.280375004)
 Part449.Anchored = true
 Part449.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part449.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part449.BrickColor = BrickColor.new("Royal purple")
+Part449.BrickColor = BrickColor.new("Bright red")
 Part449.CanCollide = false
 Part449.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part449.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4807,7 +4807,7 @@ Part449.Material = Enum.Material.Neon
 Part449.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part449.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part449.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part449.brickColor = BrickColor.new("Royal purple")
+Part449.brickColor = BrickColor.new("Bright red")
 SpecialMesh450.Parent = Part449
 SpecialMesh450.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh450.MeshType = Enum.MeshType.Wedge
@@ -4891,7 +4891,7 @@ Part457.Size = Vector3.new(0.293000042, 0.200000003, 0.280375004)
 Part457.Anchored = true
 Part457.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part457.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part457.BrickColor = BrickColor.new("Royal purple")
+Part457.BrickColor = BrickColor.new("Bright red")
 Part457.CanCollide = false
 Part457.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part457.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4899,7 +4899,7 @@ Part457.Material = Enum.Material.Neon
 Part457.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part457.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part457.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part457.brickColor = BrickColor.new("Royal purple")
+Part457.brickColor = BrickColor.new("Bright red")
 SpecialMesh458.Parent = Part457
 SpecialMesh458.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh458.MeshType = Enum.MeshType.Wedge
@@ -4914,7 +4914,7 @@ Part459.Size = Vector3.new(0.275000006, 0.238124937, 0.381375015)
 Part459.Anchored = true
 Part459.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part459.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part459.BrickColor = BrickColor.new("Royal purple")
+Part459.BrickColor = BrickColor.new("Bright red")
 Part459.CanCollide = false
 Part459.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part459.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4922,7 +4922,7 @@ Part459.Material = Enum.Material.Neon
 Part459.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part459.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part459.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part459.brickColor = BrickColor.new("Royal purple")
+Part459.brickColor = BrickColor.new("Bright red")
 SpecialMesh460.Parent = Part459
 SpecialMesh460.Scale = Vector3.new(0.524999976, 1.04999995, 0.800000012)
 SpecialMesh460.MeshType = Enum.MeshType.Brick
@@ -4983,7 +4983,7 @@ Part465.Size = Vector3.new(0.423000038, 0.200000003, 0.280375004)
 Part465.Anchored = true
 Part465.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part465.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part465.BrickColor = BrickColor.new("Royal purple")
+Part465.BrickColor = BrickColor.new("Bright red")
 Part465.CanCollide = false
 Part465.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part465.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -4991,7 +4991,7 @@ Part465.Material = Enum.Material.Neon
 Part465.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part465.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part465.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part465.brickColor = BrickColor.new("Royal purple")
+Part465.brickColor = BrickColor.new("Bright red")
 SpecialMesh466.Parent = Part465
 SpecialMesh466.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh466.MeshType = Enum.MeshType.Wedge
@@ -5006,7 +5006,7 @@ Part467.Size = Vector3.new(0.293000042, 0.200000003, 0.280375004)
 Part467.Anchored = true
 Part467.BackSurface = Enum.SurfaceType.SmoothNoOutlines
 Part467.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
-Part467.BrickColor = BrickColor.new("Royal purple")
+Part467.BrickColor = BrickColor.new("Bright red")
 Part467.CanCollide = false
 Part467.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
 Part467.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
@@ -5014,7 +5014,7 @@ Part467.Material = Enum.Material.Neon
 Part467.RightSurface = Enum.SurfaceType.SmoothNoOutlines
 Part467.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
 Part467.TopSurface = Enum.SurfaceType.SmoothNoOutlines
-Part467.brickColor = BrickColor.new("Royal purple")
+Part467.brickColor = BrickColor.new("Bright red")
 SpecialMesh468.Parent = Part467
 SpecialMesh468.Scale = Vector3.new(1, 0.300000012, 0.5)
 SpecialMesh468.MeshType = Enum.MeshType.Wedge
@@ -5219,7 +5219,7 @@ ned.BackgroundTransparency = 1
 ned.BorderSizePixel = 0.65
 ned.Size = UDim2.new(0.4,0,0.2,0)
 ned.Position = UDim2.new(0.6,0,0.8,0)
-ned.TextColor3 = BrickColor.new("Royal purple").Color
+ned.TextColor3 = BrickColor.new("Bright red").Color
 ned.TextStrokeColor3 = BrickColor.new("Cyan").Color
 ned.TextScaled = true
 ned.TextStrokeTransparency = 0
@@ -5557,7 +5557,7 @@ tl1.Attachment1 = A1
 tl1.Texture = "http://www.roblox.com/asset/?id=1978704853"
 tl1.LightEmission = 1
 tl1.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0),NumberSequenceKeypoint.new(1, 1)})
-tl1.Color = ColorSequence.new(BrickColor.new('Royal purple').Color)
+tl1.Color = ColorSequence.new(BrickColor.new('Bright red').Color)
 tl1.Lifetime = 0.6
 tl1.Enabled = false
 
@@ -6322,7 +6322,7 @@ v.Name = "DEMINISHED"
 CFuncs["Sound"].Create("rbxassetid://763718160", v, 0.75, 1.1)
 CFuncs["Sound"].Create("rbxassetid://782353443", v, 1, 1)
 for i = 0, 1 do
-sphere2(1,"Add",v.CFrame*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(1,1,1),-0.01,10,-0.01,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+sphere2(1,"Add",v.CFrame*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(1,1,1),-0.01,10,-0.01,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 end
 end
 end
@@ -6356,7 +6356,7 @@ v.Anchored = false
 local bld = Instance.new("ParticleEmitter",v)
 bld.LightEmission = 1
 bld.Texture = "rbxassetid://363275192" ---284205403
-bld.Color = ColorSequence.new(BrickColor.new("Royal purple").Color)
+bld.Color = ColorSequence.new(BrickColor.new("Bright red").Color)
 bld.Rate = 500
 bld.Lifetime = NumberRange.new(1)
 bld.Size = NumberSequence.new({NumberSequenceKeypoint.new(0,2,0),NumberSequenceKeypoint.new(0.8,2.25,0),NumberSequenceKeypoint.new(1,0,0)})
@@ -6370,7 +6370,7 @@ bld.RotSpeed = NumberRange.new(-500,500)
         sbs.D = 1000
         sbs.maxForce = Vector3.new(50000000000, 50000000000, 50000000000)
         sbs.position = v.Position + Vector3.new(math.random(-2,2),10 + math.random(-2,2),math.random(-2,2))
-v.Color = BrickColor.new("Royal purple").Color
+v.Color = BrickColor.new("Bright red").Color
 coroutine.resume(coroutine.create(function()
 for i = 0, 49 do
 swait(1)
@@ -6381,7 +6381,7 @@ v:BreakJoints()
 for i = 0, 4 do
 slash(math.random(10,50)/10,3,true,"Round","Add","Out",v.CFrame*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(0.01,0.0025,0.01),math.random(10,100)/2500,BrickColor.new("White"))
 end
-block(1,"Add",v.CFrame,vt(0,0,0),0.1,0.1,0.1,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+block(1,"Add",v.CFrame,vt(0,0,0),0.1,0.1,0.1,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 CFuncs["Sound"].Create("rbxassetid://782353117", v, 0.25, 1.2)
 CFuncs["Sound"].Create("rbxassetid://1192402877", v, 0.5, 0.75)
 bld.Speed = NumberRange.new(10,25)
@@ -6759,13 +6759,13 @@ CFuncs["Sound"].Create("rbxassetid://1368637781", rarmor, 2.5, 1.25)
 CFuncs["Sound"].Create("rbxassetid://200633077", rarmor, 1, 1)
 CFuncs["Sound"].Create("rbxassetid://169380495", rarmor, 0.5, 1.1)
 sphere2(5,"Add",root.CFrame,vt(5,5,5),0.25,0.25,0.25,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
-sphere2(6,"Add",root.CFrame,vt(5,5,5),0.25,0.25,0.25,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+sphere2(6,"Add",root.CFrame,vt(5,5,5),0.25,0.25,0.25,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 	for i = 0, 2, 0.1 do
 		swait()
 hum.CameraOffset = vt(math.random(-5,5)/50,math.random(-5,5)/50,math.random(-5,5)/50)
 sphere2(5,"Add",rarmor.CFrame*CFrame.new(math.random(-8,-2),0,0)*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(0.1,0.1,0.1),0,0.1,0,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
 waveEff(5,"Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(0,math.rad(math.random(-360,360)),0),vt(5,0.25,5),0.05,0.015,BrickColor.new("Cyan"))
-waveEff(5,"Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(0,math.rad(math.random(-360,360)),0),vt(10,0.25,10),0.05,0.015,BrickColor.new("Royal purple"))
+waveEff(5,"Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(0,math.rad(math.random(-360,360)),0),vt(10,0.25,10),0.05,0.015,BrickColor.new("Bright red"))
 	RH.C0=clerp(RH.C0,cf(1,-1,0)*angles(math.rad(0),math.rad(90),math.rad(0))*angles(math.rad(-3),math.rad(0),math.rad(0)),.2)
 LH.C0=clerp(LH.C0,cf(-1,-1,0)*angles(math.rad(0),math.rad(-90),math.rad(0))*angles(math.rad(-3),math.rad(10),math.rad(0)),.2)
 RootJoint.C0=clerp(RootJoint.C0,RootCF*cf(0,0,0)*angles(math.rad(0),math.rad(0),math.rad(-10)),.3)
@@ -6984,7 +6984,7 @@ bgui.Size = bgui.Size - UDim2.new(0.25, 0, 0.25, 0)
 slash(math.random(50,100)/10,5,true,"Round","Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(math.rad(math.random(-10,10)),math.rad(math.random(-360,360)),math.rad(math.random(-10,10))),vt(0.1,0.01,0.1),math.random(25,50)/250,BrickColor.new("White"))
 sphere2(5,"Add",rarmor.CFrame*CFrame.new(math.random(-8,-2),0,0)*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(0.1,0.1,0.1),0,0.1,0,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
 hum.CameraOffset = vt(math.random(-10,10)/50,math.random(-10,10)/50,math.random(-10,10)/50)
-sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color,0)
+sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color,0)
 sphereMK(5,math.random(1,15)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-25,25)),math.rad(math.random(-25,25)),math.rad(math.random(-25,25))),0.75,0.75,20,-0.0075,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color,0)
 waveEff(5,"Add","In",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(0,math.rad(math.random(-360,360)),0),vt(15,0.25,15),-0.075,0.05,BrickColor.new("White"))
 	RH.C0=clerp(RH.C0,cf(1,-0.5,0)*angles(math.rad(0),math.rad(90),math.rad(0))*angles(math.rad(-3),math.rad(-40),math.rad(10)),.2)
@@ -7031,7 +7031,7 @@ CFuncs["Sound"].Create("rbxassetid://200632992", rarmor, 1.25, 1)
 MagniDamage(tors, 10, 60,85, 0, "Normal",153092213)
 for i = 0, 1, 0.6 do
 		swait()
-sphereMK(2,-1,"Add",root.CFrame*CFrame.new(math.random(-8,8),math.random(-8,8),math.random(-3,8))*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.5,0.5,math.random(5,25),-0.0075,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color,0)
+sphereMK(2,-1,"Add",root.CFrame*CFrame.new(math.random(-8,8),math.random(-8,8),math.random(-3,8))*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.5,0.5,math.random(5,25),-0.0075,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color,0)
 root.CFrame = root.CFrame + root.CFrame.lookVector*3
 root.Velocity = vt(0,0,0)
 	RH.C0=clerp(RH.C0,cf(1,-1,0)*angles(math.rad(0),math.rad(90),math.rad(0))*angles(math.rad(-3),math.rad(0),math.rad(0)),.2)
@@ -7063,7 +7063,7 @@ CFuncs["Sound"].Create("rbxassetid://200632992", rarmor, 1.25, 1)
 MagniDamage(tors, 10, 60,85, 0, "Normal",153092213)
 for i = 0, 1, 0.6 do
 		swait()
-sphereMK(2,-1,"Add",root.CFrame*CFrame.new(math.random(-8,8),math.random(-8,8),math.random(-3,8))*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.5,0.5,math.random(5,25),-0.0075,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color,0)
+sphereMK(2,-1,"Add",root.CFrame*CFrame.new(math.random(-8,8),math.random(-8,8),math.random(-3,8))*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),0.5,0.5,math.random(5,25),-0.0075,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color,0)
 root.CFrame = root.CFrame + root.CFrame.lookVector*3
 root.Velocity = vt(0,0,0)
 	RH.C0=clerp(RH.C0,cf(1,-1,0)*angles(math.rad(0),math.rad(90),math.rad(0))*angles(math.rad(-3),math.rad(0),math.rad(0)),.2)
@@ -7166,7 +7166,7 @@ a.CFrame = CFrame.new(orb.CFrame.p, position) * CFrame.new(0, 0, 0)
 orb.CFrame = a.CFrame
 for i = 0, 8, 0.1 do
 swait()
-sphere2(5,"Add",orb.CFrame*CFrame.new(math.random(-20,20),math.random(-20,20),math.random(-20,20)),vt(1,1,1),0.01,0.01,0.01,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+sphere2(5,"Add",orb.CFrame*CFrame.new(math.random(-20,20),math.random(-20,20),math.random(-20,20)),vt(1,1,1),0.01,0.01,0.01,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 ray = Ray.new(
 orb.CFrame.p,                           -- origin
 (mouse.Hit.p - orb.CFrame.p).unit * 500 -- direction
@@ -7195,7 +7195,7 @@ bv.Parent = orb
 local hitted = false
 CFuncs["Sound"].Create("rbxassetid://466493476", orb, 7.5, 0.7)
 waveEff(2,"Add","Out",orb.CFrame*CFrame.Angles(math.rad(90),math.rad(math.random(-360,360)),0),vt(5,1,5),0.5,0.1,BrickColor.new("Cyan"))
-waveEff(4,"Add","Out",orb.CFrame*CFrame.Angles(math.rad(90),math.rad(math.random(-360,360)),0),vt(5,1,5),0.5,0.05,BrickColor.new("Royal purple"))
+waveEff(4,"Add","Out",orb.CFrame*CFrame.Angles(math.rad(90),math.rad(math.random(-360,360)),0),vt(5,1,5),0.5,0.05,BrickColor.new("Bright red"))
 coroutine.resume(coroutine.create(function()
 while true do
 swait(2)
@@ -7218,14 +7218,14 @@ end
 slash(1,5,true,"Round","Add","Out",orb.CFrame*CFrame.Angles(math.rad(90),math.rad(math.random(-360,360)),0),vt(0.01,0.015,0.01),1.5,BrickColor.new("White"))
 slash(1,5,true,"Round","Add","Out",orb.CFrame*CFrame.Angles(math.rad(90),math.rad(math.random(-360,360)),0),vt(0.01,0.01,0.01),2,BrickColor.new("White"))
 sphere2(1,"Add",orb.CFrame,vt(10,10,10),1,1,1,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
-sphere2(1.5,"Add",orb.CFrame,vt(10,10,10),1.1,1.1,1.1,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
-sphere2(2,"Add",orb.CFrame,vt(10,10,10),1.2,1.2,1.2,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+sphere2(1.5,"Add",orb.CFrame,vt(10,10,10),1.1,1.1,1.1,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
+sphere2(2,"Add",orb.CFrame,vt(10,10,10),1.2,1.2,1.2,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 orb.Anchored = true
 orb.Transparency = 1
 coroutine.resume(coroutine.create(function()
 for i = 0, 4, 0.1 do
 swait()
-slash(math.random(10,50)/10,5,true,"Round","Add","Out",orb.CFrame*CFrame.Angles(math.rad(90 + math.random(-5,5)),math.rad(math.random(-360,360)),math.rad(math.random(-5,5))),vt(0.01,0.015,0.01),1.5,BrickColor.new("Royal purple"))
+slash(math.random(10,50)/10,5,true,"Round","Add","Out",orb.CFrame*CFrame.Angles(math.rad(90 + math.random(-5,5)),math.rad(math.random(-360,360)),math.rad(math.random(-5,5))),vt(0.01,0.015,0.01),1.5,BrickColor.new("Bright red"))
 hum.CameraOffset = vt(math.random(-10,10)/25,math.random(-10,10)/25,math.random(-10,10)/25)
 end
 hum.CameraOffset = vt(0,0,0)
@@ -7263,7 +7263,7 @@ CFuncs["Sound"].Create("rbxassetid://200633108", rarmor, 2, 1.05)
 CFuncs["Sound"].Create("rbxassetid://234365573", rarmor, 2.5, 1.025)
 for i = 0, 1, 0.6 do
 		swait()
-sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color,0)
+sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color,0)
 sphereMK(5,math.random(1,15)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-25,25)),math.rad(math.random(-25,25)),math.rad(math.random(-25,25))),0.75,0.75,20,-0.0075,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color,0)
 slash(math.random(50,100)/10,5,true,"Round","Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(math.rad(math.random(-5,5)),math.rad(math.random(-360,360)),math.rad(math.random(-5,5))),vt(0.05,0.01,0.05),math.random(25,50)/250,BrickColor.new("White"))
 sphere2(5,"Add",rarmor.CFrame*CFrame.new(math.random(-8,-2),0,0)*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(0.1,0.1,0.1),0,0.1,0,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
@@ -7279,7 +7279,7 @@ end
 slash(5,5,true,"Round","Add","Out",rarmor.CFrame*CFrame.new(0,0,0)*CFrame.Angles(0,0,0),vt(0.05,0.01,0.05),0.05,BrickColor.new("White"))
 for i = 0, 1, 0.6 do
 		swait()
-sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color,0)
+sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color,0)
 sphereMK(5,math.random(1,15)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-25,25)),math.rad(math.random(-25,25)),math.rad(math.random(-25,25))),0.75,0.75,20,-0.0075,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color,0)
 slash(math.random(50,100)/10,5,true,"Round","Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(math.rad(math.random(-5,5)),math.rad(math.random(-360,360)),math.rad(math.random(-5,5))),vt(0.05,0.01,0.05),math.random(25,50)/250,BrickColor.new("White"))
 sphere2(5,"Add",rarmor.CFrame*CFrame.new(math.random(-8,-2),0,0)*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(0.1,0.1,0.1),0,0.1,0,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
@@ -7295,7 +7295,7 @@ end
 slash(5,5,true,"Round","Add","Out",rarmor.CFrame*CFrame.new(0,0,0)*CFrame.Angles(0,0,0),vt(0.05,0.01,0.05),0.05,BrickColor.new("White"))
 for i = 0, 1, 0.6 do
 		swait()
-sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color,0)
+sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color,0)
 sphereMK(5,math.random(1,15)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-25,25)),math.rad(math.random(-25,25)),math.rad(math.random(-25,25))),0.75,0.75,20,-0.0075,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color,0)
 slash(math.random(50,100)/10,5,true,"Round","Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(math.rad(math.random(-5,5)),math.rad(math.random(-360,360)),math.rad(math.random(-5,5))),vt(0.05,0.01,0.05),math.random(25,50)/250,BrickColor.new("White"))
 sphere2(5,"Add",rarmor.CFrame*CFrame.new(math.random(-8,-2),0,0)*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(0.1,0.1,0.1),0,0.1,0,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
@@ -7311,7 +7311,7 @@ end
 slash(5,5,true,"Round","Add","Out",rarmor.CFrame*CFrame.new(0,0,0)*CFrame.Angles(0,0,0),vt(0.05,0.01,0.05),0.05,BrickColor.new("White"))
 for i = 0, 1, 0.6 do
 		swait()
-sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color,0)
+sphereMK(5,math.random(4,25)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-10,10)),math.rad(math.random(-10,10)),math.rad(math.random(-10,10))),0.75,0.75,20,-0.0075,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color,0)
 sphereMK(5,math.random(1,15)/45,"Add",root.CFrame*CFrame.new(math.random(-15,15),-20,math.random(-15,15))*CFrame.Angles(math.rad(90 + math.random(-25,25)),math.rad(math.random(-25,25)),math.rad(math.random(-25,25))),0.75,0.75,20,-0.0075,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color,0)
 slash(math.random(50,100)/10,5,true,"Round","Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(math.rad(math.random(-5,5)),math.rad(math.random(-360,360)),math.rad(math.random(-5,5))),vt(0.05,0.01,0.05),math.random(25,50)/250,BrickColor.new("White"))
 sphere2(5,"Add",rarmor.CFrame*CFrame.new(math.random(-8,-2),0,0)*CFrame.Angles(math.rad(math.random(-360,360)),math.rad(math.random(-360,360)),math.rad(math.random(-360,360))),vt(0.1,0.1,0.1),0,0.1,0,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
@@ -7330,7 +7330,7 @@ hitb.Anchored = true
 hitb.CFrame = root.CFrame + root.CFrame.lookVector*8
 hitb.CFrame = hitb.CFrame*CFrame.new(0,1,0)
 MagniDamage(hitb, 8, 92,158, 0, "Normal",153092213)
-sphere2(5,"Add",hitb.CFrame,vt(2.1,2.1,2),-0.02,-0.02,5,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+sphere2(5,"Add",hitb.CFrame,vt(2.1,2.1,2),-0.02,-0.02,5,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 sphere2(5,"Add",hitb.CFrame,vt(2,2,2),-0.02,-0.02,4,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
 for i = 0, 24 do
 slash(math.random(20,100)/10,5,true,"Round","Add","Out",hitb.CFrame*CFrame.new(0,0,math.random(-60,60))*CFrame.Angles(math.rad(90),0,0),vt(0.01,0.01,0.01),math.random(10,100)/1000,BrickColor.new("White"))
@@ -7367,7 +7367,7 @@ wng1a.Transparency = wng1a.Transparency - 1
 wng1b.Transparency = wng1b.Transparency - 1
 wng2a.Transparency = wng2a.Transparency - 1
 wng2b.Transparency = wng2b.Transparency - 1
-sphere2(5,"Add",root.CFrame,vt(1,1,1),1.5,1.5,1.5,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+sphere2(5,"Add",root.CFrame,vt(1,1,1),1.5,1.5,1.5,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 sphere2(5,"Add",root.CFrame,vt(1,1,1),1,1,1,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
 CFuncs["Sound"].Create("rbxassetid://1368637781", root, 7.5, 1)
 for i = 0, 2, 0.1 do
@@ -7397,7 +7397,7 @@ tl1.Attachment1 = lat2
 tl1.Texture = "http://www.roblox.com/asset/?id=1049219073"
 tl1.LightEmission = 1
 tl1.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1),NumberSequenceKeypoint.new(0.05, 0),NumberSequenceKeypoint.new(1, 1)})
-tl1.Color = ColorSequence.new(BrickColor.new('Royal purple').Color,BrickColor.new('Cyan').Color)
+tl1.Color = ColorSequence.new(BrickColor.new('Bright red').Color,BrickColor.new('Cyan').Color)
 tl1.Lifetime = 5
 local tl2 = tl1:Clone()
 tl2.Attachment0 = rat1
@@ -7408,7 +7408,7 @@ hum.Jump = true
 swait()
 hum.JumpPower = 0
 root.Velocity = vt(0,250,0) + root.CFrame.lookVector*250
-sphere2(5,"Add",root.CFrame*CFrame.Angles(math.rad(-45),0,0),vt(25,1,25),0.3,5,0.3,BrickColor.new("Royal purple"),BrickColor.new("Royal purple").Color)
+sphere2(5,"Add",root.CFrame*CFrame.Angles(math.rad(-45),0,0),vt(25,1,25),0.3,5,0.3,BrickColor.new("Bright red"),BrickColor.new("Bright red").Color)
 sphere2(5,"Add",root.CFrame*CFrame.Angles(math.rad(-45),0,0),vt(25,1,25),0.2,4,0.2,BrickColor.new("Cyan"),BrickColor.new("Cyan").Color)
 for i = 0, 49 do
 waveEff(math.random(10,100)/10,"Add","Out",root.CFrame*CFrame.new(0,-3,0)*CFrame.Angles(0,math.rad(math.random(-360,360)),0),vt(15,0.25,15),math.random(25,250)/250,0.25,BrickColor.new("White"))
