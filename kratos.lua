@@ -5990,7 +5990,7 @@ end
 if HatAlt then
 	HatAlt.Handle:BreakJoints()
 	table.insert(Events, game:GetService("RunService").PostSimulation:Connect(function()
-		HatAlt.Handle.CFrame = weaponweld.Parent.CFrame * CFrame.new(-1, -0.15, -1.5) * CFrame.Angles(0,0,math.rad(-45))
+		HatAlt.Handle.CFrame = weaponweld.Parent.CFrame * CFrame.new(-1, -0.15, 0) * CFrame.Angles(0,1,math.rad(-45))
 		HatAlt.Handle.Velocity = Vector3.new()
 	end))
 end
