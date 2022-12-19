@@ -30,6 +30,7 @@ local HatScripts = Main:MakeTab("Hat Scripts")
 local Animations = Main:MakeTab("Animations")
 local Credits = Main:MakeTab("Credits")
 local Hats = Main:MakeTab("Hats")
+local CustomSwords = Main:MakeTab("Custom Swords")
 
 local function BetterStopScript()
 	StopScript()
@@ -182,6 +183,15 @@ do -- [[ Scripts ]] --
 	end)
 	FreeScripts:MakeButton("Cadacus.", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/scripts/Cadacus.lua"))()
+	end)
+	CustomSwords:MakeButton("Huge Hammer", function()
+		loadstring(game:HttpGet("https://github.com/muiky05/randomeditedscripts/blob/main/hammer.lua"))()
+	end)
+	CustomSwords:MakeButton("Leviathan Axe - Kratos", function()
+		loadstring(game:HttpGet("https://github.com/muiky05/randomeditedscripts/blob/main/kratos.lua"))()
+	end)
+	CustomSwords:MakeButton("Stormbreaker", function()
+		loadstring(game:HttpGet("https://github.com/muiky05/randomeditedscripts/blob/main/stormbreakerneptunian.lua"))()
 	end)
 end
 
