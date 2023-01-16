@@ -2,7 +2,7 @@ local Global = (getgenv and getgenv()) or shared
 if not isfile and isfolder and writefile and (getsynasset or getcustomasset) then
     warn("Exploit will not run custom songs")
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/packages/FunctionPack.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/toldblock/GelatekHub/main/src/packages/FunctionPack.lua"))()
 Global.GelatekHubConfig = {
 	["Permanent Death"] = false,
 	["Torso Fling"] = false,
