@@ -13,7 +13,7 @@ Global.GelatekHubConfig = {
 	["Anti Void"] = false,
 	["Anti Void Offset"] = 75
 }
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/UILibrary.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/toldblock/GelatekHub/main/src/lib/UILibrary.lua"))()
 local Main = Library:Create("Gelatek Hub", "Revamped by Ernad <3", Color3.fromRGB(159, 1, 198))
 local UserInputService = game:GetService("UserInputService")
 if UserInputService.TouchEnabled then
@@ -38,7 +38,7 @@ local function BetterStopScript()
 end
 
 Reanimate:MakeButton("Reanimate", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/Reanimate.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/toldblock/GelatekHub/main/src/lib/Reanimate.lua"))()
 end)
 Reanimate:MakeToggle("Permanent Death", function(Bool)
 	Global.GelatekHubConfig["Permanent Death"] = Bool
