@@ -128,6 +128,9 @@ do -- [[ Animations ]] --
 	Animations:MakeButton("Pushups", function()
 		PlayAnimation(4966881089)
 	end)
+	Animations:MakeButton("California Girls", function()
+		PlayAnimation(12219303048)
+	end)
 end
 
 do -- [[ Scripts ]] --
