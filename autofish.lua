@@ -96,7 +96,7 @@ if NewRod and NewRod.Name:lower():find('rod') then
     Rod = NewRod
 end
 
-if LocalPlayer.Name == "JasonFireballs" then
+if LocalPlayer.Name == "muiky05" then
 	ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
 	ShowNotification(`Hello Jason!`)
 	ShowNotification(`Press '{Keybind.Name}' to enable.`)
