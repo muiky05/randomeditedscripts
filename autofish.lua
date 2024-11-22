@@ -22,8 +22,6 @@ function ShowNotification(String)
     })
 end
 
-if LocalPlayer.Name ~= "JasonFireballs" then ShowNotification(`You are not whitelisted.`) return end
-
 function ToggleFarm(Name, State, Input)
     if State == Enum.UserInputState.Begin then
         Enabled = not Enabled
@@ -98,5 +96,11 @@ if NewRod and NewRod.Name:lower():find('rod') then
     Rod = NewRod
 end
 
-ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
-ShowNotification(`Press '{Keybind.Name}' to enable.`)
+if LocalPlayer.Name == "JasonFireballs" then
+	ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
+	ShowNotification(`Hello Jason!`)
+	ShowNotification(`Press '{Keybind.Name}' to enable.`)
+else
+	ShowNotification(`You are not whitelisted.`)
+	return
+end
