@@ -111,7 +111,7 @@ else
 	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
 end
 
-LocalPlayer.Idled:connect(function()
+LocalPlayer.Idled:Connect(function()
 	VirtualUser:CaptureController()
 	VirtualUser:ClickButton2(Vector2.new())
 end)
