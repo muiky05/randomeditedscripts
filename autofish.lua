@@ -102,5 +102,6 @@ if LocalPlayer.Name == "JasonFireballs" then
 	ShowNotification(`Press '{Keybind.Name}' to enable.`)
 else
 	ShowNotification(`You are not whitelisted.`)
-	return
+	wait(5)
+	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
 end
