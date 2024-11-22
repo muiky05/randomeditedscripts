@@ -22,6 +22,8 @@ function ShowNotification(String)
     })
 end
 
+if LocalPlayer.Name ~= "JasonFireballs" then ShowNotification(`You are not whitelisted.`) return end
+
 function ToggleFarm(Name, State, Input)
     if State == Enum.UserInputState.Begin then
         Enabled = not Enabled
@@ -34,14 +36,14 @@ function ToggleFarm(Name, State, Input)
             end
         end
         
-        ShowNotification(`Status: {Enabled}`)
+        ShowNotification(`{Enabled}`)
     end
 end
 
 LocalPlayer.Character.ChildAdded:Connect(function(Child)
     if Child:IsA('Tool') and Child.Name:lower():find('rod') then
         Rod = Child
-		ShowNotification(`Rod was equipped`)
+		ShowNotification(`Rod equipped`)
     end
 end)
 
@@ -97,4 +99,4 @@ if NewRod and NewRod.Name:lower():find('rod') then
 end
 
 ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
-ShowNotification(`Press '{Keybind.Name}' to enable/disable`)
+ShowNotification(`Press '{Keybind.Name}' to enable.`)
