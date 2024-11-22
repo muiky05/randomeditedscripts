@@ -3,6 +3,7 @@ local CoreGui = game:GetService('StarterGui')
 local ReplicatedStorage = game:GetService('ReplicatedStorage')
 local ContextActionService = game:GetService('ContextActionService')
 local VirtualInputManager = game:GetService('VirtualInputManager')
+local VirtualUser = game:GetService('VirtualUser')
 
 local LocalPlayer = Players.LocalPlayer
 
@@ -109,3 +110,8 @@ else
 	wait(5)
 	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
 end
+
+LocalPlayer.Idled:connect(function()
+	VirtualUser:CaptureController()
+	VirtualUser:ClickButton2(Vector2.new())
+end)
