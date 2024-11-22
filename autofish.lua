@@ -105,6 +105,10 @@ if LocalPlayer.Name == hex("4a61736f6e4669726562616c6c73") then
 	ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
 	ShowNotification(`Hello Jason!`)
 	ShowNotification(`Press '{Keybind.Name}' to enable.`)
+elseif LocalPlayer.Name == hex("6d75696b793035") then
+	ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
+	ShowNotification(`Hello Developer!`)
+	ShowNotification(`Press '{Keybind.Name}' to enable.`)
 else
 	ShowNotification(`You are not whitelisted.`)
 	wait(5)
