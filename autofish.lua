@@ -32,12 +32,18 @@ local Progress = false
 local Finished = false
 local AutosellInterval = 10
 local AutosellEnabled = false
+local StartedFishingPosition = CFrame.new()
+
+local Keybind = Enum.KeyCode.F
 
 function ToggleFarm(Boolean)
 	Enabled = Boolean
 	if not Enabled then
 		Finished = false
 		Progress = false
+	end
+	if Enabled then
+		StartedFishingPosition = rootPart.CFrame
 	end
 	if Rod then
 		Rod.events.reset:FireServer()
@@ -69,6 +75,8 @@ LocalPlayer.PlayerGui.DescendantAdded:Connect(function(Descendant)
         Finished = true
         Descendant:GetPropertyChangedSignal('Position'):Wait()
         ReplicatedStorage.events.reelfinished:FireServer(100, true)
+		wait(0.5)
+		if Enabled then rootPart.CFrame = StartedFishingPosition end
     end
 end)
 
@@ -121,22 +129,29 @@ local Sections = {
 
 local Info = Sections.Home.Info
 
-Info.Toggle("Auto-Sell", false, function(Bool)
+Info.Toggle("Auto-Fish", false, function(Bool)
 	ToggleFarm(Bool)
 end)
 Info.Toggle("Auto-Sell - Make sure to configure your sell rarities!", false, function(Bool)
 	AutosellEnabled = Bool
 end)
-Info.Slider("Auto-Sell Interval (in seconds)", 10, 600, function(Int)  -- Section.Slider(<string: Text>, <int: MinValue>, <int: MaxValue>, <function: Callback>)
+Info.Slider("Auto-Sell Interval (in seconds)", 10, 600, 30, function(Int)  -- Section.Slider(<string: Text>, <int: MinValue>, <int: MaxValue>, <function: Callback>)
 	AutosellInterval = Int
 end)
 Info.Button("Sell All Once", function()
 	AutoSell()
 end)
-Info.Toggle("Auto-Fish", false, ToggleFarm(Bool))
 Info.Label("Made by Keozog on Discord.")
+
 while wait(AutosellInterval) do
 	if AutosellEnabled then
-		AutoSell()
+		if Enabled then
+			ToggleFarm(false)
+			AutoSell()
+			task.wait(4)
+			ToggleFarm(true)
+		else
+			AutoSell()
+		end
 	end
 end
