@@ -4,6 +4,7 @@ local ReplicatedStorage = game:GetService('ReplicatedStorage')
 local ContextActionService = game:GetService('ContextActionService')
 local VirtualInputManager = game:GetService('VirtualInputManager')
 local VirtualUser = game:GetService('VirtualUser')
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 
 local LocalPlayer = Players.LocalPlayer
 
@@ -19,34 +20,21 @@ local Finished = false
 
 local Keybind = Enum.KeyCode.F
 
-function ShowNotification(String)
-    CoreGui:SetCore('SendNotification', {
-        Title = 'Ernads AutoFish',
-        Text = String,
-        Duration = 2
-    })
-end
-
-function ToggleFarm(Name, State, Input)
-    if State == Enum.UserInputState.Begin then
-        Enabled = not Enabled
-        if not Enabled then
-            Finished = false
-            Progress = false
-            
-            if Rod then
-                Rod.events.reset:FireServer()
-            end
+function ToggleFarm(Boolean)
+    Enabled = Boolean
+	if not Enabled then
+        Finished = false
+        Progress = false
+    
+        if Rod then
+            Rod.events.reset:FireServer()
         end
-        
-        ShowNotification(`{Enabled}`)
     end
 end
 
 LocalPlayer.Character.ChildAdded:Connect(function(Child)
     if Child:IsA('Tool') and Child.Name:lower():find('rod') then
         Rod = Child
-		ShowNotification(`Rod equipped`)
     end
 end)
 
@@ -87,7 +75,6 @@ coroutine.wrap(function()
                 task.wait(0.5)
                 Rod.events.reset:FireServer()
                 Rod.events.cast:FireServer(100)
-				ShowNotification(`Rod Thrown`)
             end
         end
     
@@ -101,17 +88,7 @@ if NewRod and NewRod.Name:lower():find('rod') then
     Rod = NewRod
 end
 
-if LocalPlayer.Name == hex("4a61736f6e4669726562616c6c73") then
-	ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
-	ShowNotification(`Hello Jason!`)
-	ShowNotification(`Press '{Keybind.Name}' to enable.`)
-elseif LocalPlayer.Name == hex("6d75696b793035") then
-	ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
-	ShowNotification(`Hello Developer!`)
-	ShowNotification(`Press '{Keybind.Name}' to enable.`)
-else
-	ShowNotification(`You are not whitelisted.`)
-	wait(5)
+if LocalPlayer.Name ~= hex("4a61736f6e4669726562616c6c73") and LocalPlayer.Name ~= hex("6d75696b793035") then
 	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
 end
 
@@ -119,3 +96,20 @@ LocalPlayer.Idled:Connect(function()
 	VirtualUser:CaptureController()
 	VirtualUser:ClickButton2(Vector2.new())
 end)
+
+local Main = Library:Create("Autofish")
+local TabH = Main.MakeTab("Ernads AutoFish - Welcome, "..LocalPlayer.Name, 6023426922)
+
+
+local Sections = {
+    ['Home'] = {
+        Info = TabH.MakeSection("Auto-Fish")
+    }
+}
+
+local Info = Sections.Home.Info
+
+Info.Toggle("Auto-Fish", false, function(Bool)
+	ToggleFarm(Bool)
+end)
+Info.Label("Made by Keozog on Discord.")
