@@ -137,7 +137,6 @@ Info.Button("Sell All Once", function()
 end)
 Info.Toggle("Auto-Fish", false, ToggleFarm(Bool))
 Info.Label("Made by Keozog on Discord.")
-
 while wait(AutosellInterval) do
 	if AutosellEnabled then
 		AutoSell()
