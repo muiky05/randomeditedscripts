@@ -9,7 +9,7 @@ local sellPosition = CFrame.new(464, 151, 232)
 
 local LocalPlayer = Players.LocalPlayer
 
-local character = player.Character or player.CharacterAdded:Wait()
+local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 local rootPart = character:WaitForChild("HumanoidRootPart")
 
 function hex(hex)
