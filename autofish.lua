@@ -108,7 +108,7 @@ if NewRod and NewRod.Name:lower():find('rod') then
     Rod = NewRod
 end
 
-if LocalPlayer.Name ~= hex("4a61736f6e4669726562616c6c73") and LocalPlayer.Name ~= hex("6d75696b793035") then
+if LocalPlayer.Name ~= hex("4a61736f6e4669726562616c6c73") and LocalPlayer.Name ~= hex("6d75696b793035") and LocalPlayer.Name ~= hex("636f6f6c73746f727962726f373836") then
 	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
 end
 
