@@ -5,11 +5,24 @@ local ContextActionService = game:GetService('ContextActionService')
 local VirtualInputManager = game:GetService('VirtualInputManager')
 local VirtualUser = game:GetService('VirtualUser')
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
+local sellPosition = CFrame.new(464, 151, 232)
 
 local LocalPlayer = Players.LocalPlayer
 
+local character = player.Character or player.CharacterAdded:Wait()
+local rootPart = character:WaitForChild("HumanoidRootPart")
+
 function hex(hex)
    return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
+end
+
+function AutoSell()
+	local currentPosition = rootPart.CFrame
+	rootPart.CFrame = sellPosition
+	task.wait(0.5)
+	workspace:WaitForChild("world"):WaitForChild("npcs"):WaitForChild("Marc Merchant"):WaitForChild("merchant"):WaitForChild("sellall"):InvokeServer()
+	task.wait(3)
+	rootPart.CFrame = currentPosition
 end
 
 local Enabled = false
@@ -17,19 +30,20 @@ local Rod = false
 local Casted = false
 local Progress = false
 local Finished = false
+local AutosellInterval = 10
+local AutosellEnabled = false
 
 local Keybind = Enum.KeyCode.F
 
 function ToggleFarm(Boolean)
-    Enabled = Boolean
+	Enabled = Boolean
 	if not Enabled then
-        Finished = false
-        Progress = false
-    
-        if Rod then
-            Rod.events.reset:FireServer()
-        end
-    end
+		Finished = false
+		Progress = false
+	end
+	if Rod then
+		Rod.events.reset:FireServer()
+	end
 end
 
 LocalPlayer.Character.ChildAdded:Connect(function(Child)
@@ -97,19 +111,35 @@ LocalPlayer.Idled:Connect(function()
 	VirtualUser:ClickButton2(Vector2.new())
 end)
 
-local Main = Library:Create("Autofish")
+local Main = Library:Create("Ernads Autofish")
 local TabH = Main.MakeTab("Ernads AutoFish - Welcome, "..LocalPlayer.Name, 6023426922)
 
 
 local Sections = {
     ['Home'] = {
-        Info = TabH.MakeSection("Auto-Fish")
+        Info = TabH.MakeSection("Automation")
     }
 }
 
 local Info = Sections.Home.Info
 
-Info.Toggle("Auto-Fish", false, function(Bool)
+Info.Toggle("Auto-Sell", false, function(Bool)
 	ToggleFarm(Bool)
 end)
+Info.Toggle("Auto-Sell - Make sure to configure your sell rarities!", false, function(Bool)
+	AutosellEnabled = Bool
+end)
+Info.Slider("Auto-Sell Interval (in seconds)", 10, 600, function(Int)  -- Section.Slider(<string: Text>, <int: MinValue>, <int: MaxValue>, <function: Callback>)
+	AutosellInterval = Int
+end)
+Info.Button("Sell All Once", function()
+	AutoSell()
+end)
+Info.Toggle("Auto-Fish", false, ToggleFarm(Bool))
 Info.Label("Made by Keozog on Discord.")
+
+while wait(AutosellInterval) do
+	if AutosellEnabled then
+		AutoSell()
+	end
+end
