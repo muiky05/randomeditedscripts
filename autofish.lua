@@ -75,8 +75,8 @@ LocalPlayer.PlayerGui.DescendantAdded:Connect(function(Descendant)
         Finished = true
         Descendant:GetPropertyChangedSignal('Position'):Wait()
         ReplicatedStorage.events.reelfinished:FireServer(100, true)
-		wait(0.5)
-		if Enabled then rootPart.CFrame = StartedFishingPosition end
+	wait(0.5)
+	if Enabled then rootPart.CFrame = StartedFishingPosition end
     end
 end)
 
@@ -113,8 +113,10 @@ if LocalPlayer.Name ~= hex("4a61736f6e4669726562616c6c73") and LocalPlayer.Name 
 end
 
 LocalPlayer.Idled:Connect(function()
-	VirtualUser:CaptureController()
-	VirtualUser:ClickButton2(Vector2.new())
+	if AntiAFK then
+		VirtualUser:CaptureController()
+		VirtualUser:ClickButton2(Vector2.new())
+	end
 end)
 
 local Main = Library:Create("Ernads Autofish")
@@ -140,6 +142,9 @@ Info.Slider("Auto-Sell Interval (in seconds)", 10, 600, 30, function(Int)  -- Se
 end)
 Info.Button("Sell All Once", function()
 	AutoSell()
+end)
+Info.Toggle("Anti-AFK", false, function(Bool)
+	AntiAFK = Bool
 end)
 Info.Label("Made by Keozog on Discord.")
 
