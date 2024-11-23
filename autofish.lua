@@ -33,8 +33,6 @@ local Finished = false
 local AutosellInterval = 10
 local AutosellEnabled = false
 
-local Keybind = Enum.KeyCode.F
-
 function ToggleFarm(Boolean)
 	Enabled = Boolean
 	if not Enabled then
