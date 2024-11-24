@@ -5,7 +5,7 @@ local TabH = Main.MakeTab("Main", 6023426922)
 
 local Sections = {
     ['Main'] = {
-        Info = TabH.MakeSection("Scripts")
+        Scripts = TabH.MakeSection("Scripts")
     }
 }
 
@@ -187,7 +187,6 @@ while true do
     getkey()
     wait(1)
 end
-    end,
 end)
 
 
@@ -210,12 +209,8 @@ end)
 
 
 
-Info.Slider("Slide me!", 1, 1700, 10, function(Int)
-	local DropAmount = 100 
-	local Workspace = game:GetService("Workspace")
-	local ServerStuff = Workspace.ServerStuff
-	local dropAmmo = ServerStuff.dropAmmo
-	dropAmmo:FireServer("scrap", Int)
+Tab.Slider("Spawn Scrap", 1, 1700, 10, function(Int)
+	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("scrap", Int)
 end)
 
 Tab.Button("Spawn MRE", function()
@@ -414,7 +409,7 @@ Tab.Button("Spawn Crafted: KSG", function()
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-end
+end)
 Tab.Button("Spawn Crafted: Maria", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
