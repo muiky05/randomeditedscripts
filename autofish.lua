@@ -122,30 +122,95 @@ local TabH = Main.MakeTab("Ernads AutoFish - Welcome, "..LocalPlayer.Name, 60234
 
 local Sections = {
     ['Home'] = {
-        Info = TabH.MakeSection("Automation"),
+        Automation = TabH.MakeSection("Automation"),
+	Visual = TabH.MakeSection("Visual"),
 	Waypoints = TabH.MakeSection("Waypoints")
     }
 }
 
-local Info = Sections.Home.Info
+local Automation = Sections.Home.Automation
+local Visual = Sections.Home.Visual
 local Waypoints = Sections.Home.Waypoints
 
-Info.Toggle("Auto-Fish", false, function(Bool)
+Automation.Toggle("Auto-Fish", false, function(Bool)
 	ToggleFarm(Bool)
 end)
-Info.Toggle("Auto-Sell - Make sure to configure your sell rarities!", false, function(Bool)
+Automation.Toggle("Auto-Sell - Make sure to configure your sell rarities!", false, function(Bool)
 	AutosellEnabled = Bool
 end)
-Info.Slider("Auto-Sell Interval (in seconds)", 10, 600, 30, function(Int)  -- Section.Slider(<string: Text>, <int: MinValue>, <int: MaxValue>, <function: Callback>)
+Automation.Slider("Auto-Sell Interval (in seconds)", 10, 600, 30, function(Int)  -- Section.Slider(<string: Text>, <int: MinValue>, <int: MaxValue>, <function: Callback>)
 	AutosellInterval = Int
 end)
-Info.Button("Sell All Once", function()
+Automation.Button("Sell All Once", function()
 	AutoSell()
 end)
-Info.Toggle("Anti-AFK", false, function(Bool)
+Automation.Toggle("Anti-AFK", false, function(Bool)
 	AntiAFK = Bool
 end)
-Info.Label("Made by Keozog on Discord.")
+Automation.Toggle("Infinite Oxygen", false, function(Bool)
+	LocalPlayer.Character.client.oxygen.Disabled = Bool
+end)
+Visual.Toggle("Remove Fog", false, function(Bool)
+	if Bool then
+		if game:GetService("Lighting"):FindFirstChild("Sky") then
+			game:GetService("Lighting"):FindFirstChild("Sky").Parent = game:GetService("Lighting").bloom
+		end
+	else
+		if game:GetService("Lighting").bloom:FindFirstChild("Sky") then
+			game:GetService("Lighting").bloom:FindFirstChild("Sky").Parent = game:GetService("Lighting")
+		end
+	end
+end)
+Visual.Toggle("Clear Weather", false, function(Bool)
+	local OldWEA = ReplicatedStorage.world.weather.Value
+	if Bool then
+		ReplicatedStorage.world.weather.Value = 'Clear' 
+	else
+		ReplicatedStorage.world.weather.Value = OldWEA
+	end
+end)
+Visual.Toggle("Permanent Day", false, function(Bool)
+	if Bool then
+		DayOnlyLoop = RunService.Heartbeat:Connect(function()
+			game:GetService("Lighting").TimeOfDay = "12:00:00"
+		end)
+	else
+		if DayOnlyLoop then
+			DayOnlyLoop:Disconnect()
+			DayOnlyLoop = nil
+		end
+	end
+end)
+Visual.Toggle("Free Radar", false, function(Bool)
+	for _, v in pairs(game:GetService("CollectionService"):GetTagged("radarTag")) do
+		if v:IsA("BillboardGui") or v:IsA("SurfaceGui") then
+			v.Enabled = Bool
+		end
+	end
+end)
+Visual.Toggle("Free GPS", false, function(Bool)
+	if Bool then
+		local XyzClone = game:GetService("ReplicatedStorage").resources.items.items.GPS.GPS.gpsMain.xyz:Clone()
+		XyzClone.Parent = game.Players.LocalPlayer.PlayerGui:WaitForChild("hud"):WaitForChild("safezone"):WaitForChild("backpack")
+		local Pos = GetPosition()
+		local StringInput = string.format("%s,%s,%s", ExportValue(Pos[1]), ExportValue(Pos[2]), ExportValue(Pos[3]))
+		XyzClone.Text = "<font color='#ff4949'>X</font><font color = '#a3ff81'>Y</font><font color = '#626aff'>Z</font>: "..StringInput
+			
+		BypassGpsLoop = game:GetService("RunService").Heartbeat:Connect(function() -- Line 26
+			local Pos = GetPosition()
+			StringInput = string.format("%s,%s,%s", ExportValue(Pos[1]), ExportValue(Pos[2]), ExportValue(Pos[3]))
+			XyzClone.Text = "<font color='#ff4949'>X</font><font color = '#a3ff81'>Y</font><font color = '#626aff'>Z</font>: "..StringInput
+		end)
+	else
+		if PlayerGui.hud.safezone.backpack:FindFirstChild("xyz") then
+			PlayerGui.hud.safezone.backpack:FindFirstChild("xyz"):Destroy()
+		end
+		if BypassGpsLoop then
+			BypassGpsLoop:Disconnect()
+			BypassGpsLoop = nil
+		end
+	end
+end)
 
 Waypoints.Button("Moosewood", function()
 	rootPart.CFrame = CFrame.new(383,134,241)
@@ -192,6 +257,13 @@ end)
 Waypoints.Button("Rod of the Depths", function()
 	rootPart.CFrame = CFrame.new(1703,-903,1435)
 end)
+Waypoints.Button("Executive Headquarters", function()
+	rootPart.CFrame = CFrame.new(-36, -246, 205)
+end)
+
+Automation.Label("Made by Keozog on Discord.")
+Visual.Label("Made by Keozog on Discord.")
+Waypoints.Label("Made by Keozog on Discord.")
 
 while wait(AutosellInterval) do
 	if AutosellEnabled then
