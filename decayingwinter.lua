@@ -4,26 +4,116 @@ local TabH = Main.MakeTab("Ernads Decaying Winter Hub - Hello, "..game.Players.L
 
 local Sections = {
     ['Main'] = {
-	Commands = TabH.MakeSection("Commands"),
-        Perks = TabH.MakeSection("Perks"),
+    Perks = TabH.MakeSection("Perks"),
 	Spawnables = TabH.MakeSection("Spawnables"),
-	NPCs = TabH.MakeSection("NPCs"),
-	Player = TabH.MakeSection("Player"),
+	Humanoids = TabH.MakeSection("Humanoids"),
 	Sounds = TabH.MakeSection("Sounds"),
 	Notes = TabH.MakeSection("Notes")
     }
 }
 
-local Commands = Sections.Main.Commands
 local Perks = Sections.Main.Perks
 local Spawnables = Sections.Main.Spawnables
-local NPCs = Sections.Main.NPCs
-local Player = Sections.Main.Player
+local Humanoids = Sections.Main.Humanoids
 local Sounds = Sections.Main.Sounds
 local Notes = Sections.Main.Notes
 
-Tab.Button("Goodwill", function()
+Perks.Button("Decaying Winter Admin [Press F9 after running]", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ryderfreeman/decaying-winter-old-goodwill/main/script1'))()
+print([[
+
+COMMANDS CAN BE DONE AS /e command
+
+god - Regens you when you take damage. (Won't save you from dynamite)
+ungod - Turns off semi godmode
+
+nodebuff - Blocks all status effects. Moral, burning, bleeding, broken limbs, etc
+unnodebuff - Turns off no-debuff
+
+nocooldown - Removes all ability cooldowns (F key, assuming you have a perk equipped) (Also gives you inf auxiliary, which is the C key)
+cooldown - Sets your cooldowns back to normal
+
+AMMOTYPE NUMBER - sets your stash of AMMOTYPE to NUMBER (:light 50) (shells 20)
+FOODTYPE NUMBER - sets your stash of FOODTYPE to NUMBER (:mre 20) (:water 5) (:beans 60) (:cola 200)
+
+heal - Heals you, and removes status effects.
+cleareffects - Clears all status effects and debuffs
+
+stopvirus - halts your virus progression
+resetvirus - resets your current virus progression (will not revert stages)
+
+oneshot - enemies you hit will die after one hit
+unoneshot - turns off oneshot
+
+silentaim - makes it so you always hit the enemy closest to your mouse
+unsilentaim - turns off silent aim
+
+infmag - makes your mags bottomless
+uninfmag - makes the weapon you're currently holding no longer have a bottomless mag
+infreserve - sets all your ammo reserves to 900, and keeps them there. !!!!!!DO NOT GO OVER 1K!!!!!!
+uninfreserve - disables infinite reserve ammo, your ammo reserves will stay at 900 though
+
+norecoil - stops your camera from shaking
+unnorecoil - turns off no recoil
+
+nofalldamage - counters fall damage
+unnofalldamage - uncounters fall damage
+
+superrun - enables super run
+unsuperrun - disables super run
+
+nohunger - makes your hunger and thirst bar last indefinitely
+unnohunger - removes no hunger
+fill - fills your hunger and thirst bar
+
+autoparry - automatically counters all incoming melee attacks
+unautoparry - turns off autoparry
+
+killaura - turns killaura on (kills all enemies within a certain distance)
+killaura NUMBER - sets the kill radius for killaura to NUMBER (default is 30)
+unkillaura - turns off killaura
+
+killenemies - kills every enemy that's currently alive
+killenemies NUMBER - kills every enemies within NUMBER studs of you
+
+backpack - Gives you a backpack (gives you 2 more inventory slots)
+
+spawn WEAPONNAME - gives you WEAPONNAME (cannot be dropped) (guns require an empty slot)
+weaponnames - prints all the available weapon names in the dev console
+
+loopdrop ITEMNAME - rapidly drops ITEMNAME
+unloopdrop ITEMNAME
+
+infaux - Gives you infinite auxiliary equipment (Activated with C Key)
+uninfaux - Turns off infaux
+
+settrap TRAPNAME - sets the trap that gets placed when you press the U key
+
+setthrow THROWABLENAME - sets the throwable that's thrown when you press the Y key
+
+uses NUMBER - sets the uses / magazine of your current item to NUMBER
+
+cig - makes you super cool
+uncig - frees you of your nicotine addiction
+
+N Key: Heal and remove effects
+M Key: Remove effects
+U Key: Place set trap (use :settrap TRAPNAME to change the trap set with this key)
+Y Key: Hold to spam throw throwing knives, which one shot enemies
+T Key: Access game & Goodwill GUI
+
+L Key: Toggle super run
+- Key: Lower super run speed
++ Key: Increase super run speed
+
+
+!! HOLD T TO ACCESS THE GUI (FEATURES IN THE ADMIN, ESP, AND WEAPONRY TABS) !!
+
+- Toggle features in the GOODWILL tab
+- Toggle ESP elements in the ESP tab
+- Customize your held weapon's stats in the WEAPONRY tab
+
+]])
 end)
 
 
@@ -220,7 +310,7 @@ end)
 
 
 
-Spawnables.Slider("Spawn Scrap", 1, 1700, 10, function(Int)
+Spawnables.Slider("Spawn Scrap [NO COOLDOWN]", 1, 1700, 10, function(Int)
 	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("scrap", Int)
 end)
 
@@ -232,7 +322,7 @@ Spawnables.Button("Spawn Bottle", function()
 	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("rations", "Bottle")
 end)
 
-Perks.Button("Buffed Tanziner", function()
+Perks.Button("Hacked Tanziner", function()
 	local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"].basestats
 	local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"]
 	if perks then
@@ -263,7 +353,7 @@ Perks.Button("Buffed Tanziner", function()
 	end
 end)
 
-Perks.Button("Buffed Arbiter", function()
+Perks.Button("Hacked Arbiter", function()
 	local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"].basestats
 	local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"]
 	perk.name = "Arbiter but you're SQ"
@@ -298,7 +388,7 @@ Perks.Button("Buffed Arbiter", function()
 	perks.falldamagemod = true
 	perks.craftcostmod = -55 
 end)
-Perks.Button("Buffed Hivemind", function()
+Perks.Button("Hacked Hivemind", function()
         local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive"].basestats
 local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive"]
     perk.name = "Hivemaster"
@@ -473,13 +563,13 @@ Spawnables.Button("Spawn Crafted: Executioner", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
-Player.Button("ESP [M to Refresh]", function()
+Humanoids.Button("ESP [M to Refresh]", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/Decaying-Winter-Esp.lua", true))();
 end)
-NPCs.Button("Bring Sledge Queen", function()
+Humanoids.Button("Bring Sledge Queen", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/Sledgequeentp.lua", true))();
 end)
-NPCs.Button("Bring all Scavengers", function()
+Humanoids.Button("Bring all Scavengers", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/tp-all-enemy-to-you-in-dw.lua", true))();
 end)
 Spawnables.Button("Duplicate Inventory", function()
@@ -1065,7 +1155,7 @@ end)
 
 
 
-Player.Button("Infinite Stamina", function()
+Humanoids.Button("Infinite Stamina", function()
         repeat
             task.wait()
         until game.Players.LocalPlayer.PlayerGui.mainHUD.StaminaFrame:FindFirstChild("TextLabel") ~= nil
@@ -1107,7 +1197,7 @@ Player.Button("Infinite Stamina", function()
         )
 end)
 
-NPCs.Button("Control Sledge Queen [Use IY commands]", function()
+Humanoids.Button("Control Sledge Queen [Use IY commands]", function()
         local controlling = workspace.activeHostiles["AI_QUEEN"]
         local friendly = true
         game.Players.LocalPlayer.Character = controlling
@@ -1166,4 +1256,4 @@ Notes.Label("It is HIGHLY reccomended to use Infinite Yield for this!")
 Notes.Button("Inject Infinite Yield", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-Notes.Label("UI Made by Keozog on Discord")
+Notes.Label("Hub made by Keozog on Discord")
