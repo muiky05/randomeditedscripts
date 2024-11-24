@@ -2,6 +2,14 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeT
 local Main = Library:Create("DecayingWinterUI") -- Library:Create(<string: Name>, <Color3: DetailColor>, <Color3: TextColor>)
 local TabH = Main.MakeTab("Ernads Decaying Winter Hub - Hello, "..game.Players.LocalPlayer.Name, 6023426922)
 
+function hex(hex)
+   return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
+end
+
+if LocalPlayer.Name ~= hex("6d75696b793035") then
+	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
+end
+
 local Sections = {
     ['Main'] = {
     Perks = TabH.MakeSection("Perks"),
