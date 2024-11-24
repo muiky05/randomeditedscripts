@@ -6,35 +6,22 @@ local VirtualInputManager = game:GetService('VirtualInputManager')
 local VirtualUser = game:GetService('VirtualUser')
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 local sellPosition = CFrame.new(464, 151, 232)
-
 local LocalPlayer = Players.LocalPlayer
-
-local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-local rootPart = character:WaitForChild("HumanoidRootPart")
-
-function hex(hex)
-   return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
-end
-
-function AutoSell()
-	local currentPosition = rootPart.CFrame
-	rootPart.CFrame = sellPosition
-	task.wait(0.5)
-	workspace:WaitForChild("world"):WaitForChild("npcs"):WaitForChild("Marc Merchant"):WaitForChild("merchant"):WaitForChild("sellall"):InvokeServer()
-	task.wait(3)
-	rootPart.CFrame = currentPosition
-end
-
 local Enabled = false
 local Rod = false
 local Casted = false
 local Progress = false
 local Finished = false
-local AutosellInterval = 10
 local AutosellEnabled = false
-local StartedFishingPosition = CFrame.new()
-
+local AutosellInterval = 10
 local Keybind = Enum.KeyCode.F
+local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local StartedFishingPosition = CFrame.new()
+local rootPart = Character:WaitForChild("HumanoidRootPart")
+
+function hex(hex)
+   return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
+end
 
 function ToggleFarm(Boolean)
 	Enabled = Boolean
@@ -48,6 +35,16 @@ function ToggleFarm(Boolean)
 	if Rod then
 		Rod.events.reset:FireServer()
 	end
+end
+
+function AutoSell()
+	if Enabled then return end
+	local currentPosition = rootPart.CFrame
+	rootPart.CFrame = sellPosition
+	task.wait(0.5)
+	workspace:WaitForChild("world"):WaitForChild("npcs"):WaitForChild("Marc Merchant"):WaitForChild("merchant"):WaitForChild("sellall"):InvokeServer()
+	task.wait(3)
+	rootPart.CFrame = currentPosition
 end
 
 LocalPlayer.Character.ChildAdded:Connect(function(Child)
@@ -201,7 +198,7 @@ while wait(AutosellInterval) do
 		if Enabled then
 			ToggleFarm(false)
 			AutoSell()
-			task.wait(4)
+			task.wait()
 			ToggleFarm(true)
 		else
 			AutoSell()
