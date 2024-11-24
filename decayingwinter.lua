@@ -1,93 +1,77 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 
-local Window = Rayfield:CreateWindow({
-	Name = "DECAYING WINTER SCRIPT",
-	LoadingTitle = "DECAYING WINTER SCRIPT [RY EDITION]",
-	LoadingSubtitle = "made by ry",
-	ConfigurationSaving = {
-		Enabled = false,
-		FolderName = nil, -- Create a custom folder for your hub/game
-		FileName = "1771717t26g276277g127t476t17t47t21g4g5g1261253672185"
-	},
-        Discord = {
-        	Enabled = false,
-        	Invite = "pqMgjdEy", -- The Discord invite code, do not include discord.gg/
-        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-        },
-	KeySystem = false, -- Set this to true to use our key system
-	KeySettings = {
-		Title = "[MESSAGE] Ry's Personal Hub KEY",
-		Subtitle = "Key required to use script! [KEY CHANGES EVERY UPDATE!]",
-		Note = "Ask Ryder for the Key (ry#8844)",
-		SaveKey = true,
-		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		Key = "rywashere"
-	}
-})
+local Main = Library:Create("DecayingWinterUI") -- Library:Create(<string: Name>, <Color3: DetailColor>, <Color3: TextColor>)
+local TabH = Main.MakeTab("Main", 6023426922)
 
-
-local Tab = Window:CreateTab("decaying-winter-main", 10590477450)
-
--- local Section = Tab:CreateSection("t")
-
-
-local Button = Tab:CreateButton({
-	Name = "goodwill (BUGGY)",
-	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/ryderfreeman/decaying-winter-old-goodwill/main/script1'))()
-    end,
-})
-local Button = Tab:CreateButton({
-	Name = "custom perks",
-	Callback = function()
-      --// Services
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local UserInputService = game:GetService("UserInputService")
-local RunService = game:GetService("RunService")
-local StarterGui = game:GetService("StarterGui")
-local Lighting = game:GetService("Lighting")
-local Players = game:GetService("Players")
---// Variables
-local stuff = game.Workspace.InteractablesNoDel
-local gui = game.Players.LocalPlayer.PlayerGui.controlsGui
-local localplayer = game.Players.LocalPlayer
-local mainHandler = { instance = nil, senv = nil }
-local namecall = nil
-local waitTable = {}
-local tgas = {
-        ["throwrating"] = 1,
-        ["ability"] = "Can obscure vision.",
-        ["blacklisted"] = false,
-        ["animset"] = "THRW",
-        ["desc"] = "Used by riot police! Yes, we still have those! We have many hired and stationed on site at all time " ..
-            "and borrowed some of these!",
-        ["weapontype"] = "Item",
-        ["name"] = "Riot Grenade",
-        ["damagerating"] = {
-            [1] = 0,
-            [2] = 0
-        },
-        ["sizerating"] = 4,
-        ["icon"] = "2520535457",
-        ["woundrating"] = 2
+local Sections = {
+    ['Main'] = {
+        Info = TabH.MakeSection("Scripts")
+    }
 }
 
---// Functions
+local Tab = Sections.Main.Scripts
 
-function getkey()
-    spawn(function()
-for _, instance in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-    if instance:IsA("LocalScript") and instance.Name ~= "ClickDetectorScript" then
-        repeat
-            mainHandler = getsenv(instance)
-            RunService.Heartbeat:Wait()
-        until mainHandler.afflictstatus ~= nil
+Tab.Button("Goodwill", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ryderfreeman/decaying-winter-old-goodwill/main/script1'))()
+end)
 
-        local upvalue = getupvalues(mainHandler.afflictstatus)
-        _G.serverKey = upvalue[16]
-        _G.playerKey = upvalue[17]
-    end
-end
+
+
+
+
+
+
+
+
+
+
+
+
+Tab.Button("Custom Perks", function()
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local StarterGui = game:GetService("StarterGui")
+	local Lighting = game:GetService("Lighting")
+	local Players = game:GetService("Players")
+
+	local stuff = game.Workspace.InteractablesNoDel
+	local gui = game.Players.LocalPlayer.PlayerGui.controlsGui
+	local localplayer = game.Players.LocalPlayer
+	local mainHandler = { instance = nil, senv = nil }
+	local namecall = nil
+	local waitTable = {}
+	local tgas = {
+   	     ["throwrating"] = 1,
+       		["ability"] = "Can obscure vision.",
+       		["blacklisted"] = false,
+        	["animset"] = "THRW",
+        	["desc"] = "Used by riot police! Yes, we still have those! We have many hired and stationed on site at all time " ..
+        	    "and borrowed some of these!",
+        	["weapontype"] = "Item",
+        	["name"] = "Riot Grenade",
+        	["damagerating"] = {
+        	    [1] = 0,
+        	    [2] = 0
+        	},
+        	["sizerating"] = 4,
+        	["icon"] = "2520535457",
+        	["woundrating"] = 2
+	}
+
+	function getkey()
+	spawn(function()
+	for _, instance in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+	    	if instance:IsA("LocalScript") and instance.Name ~= "ClickDetectorScript" then
+			repeat
+	    	        mainHandler = getsenv(instance)
+	    	        RunService.Heartbeat:Wait()
+			until mainHandler.afflictstatus ~= nil
+			local upvalue = getupvalues(mainHandler.afflictstatus)
+		        _G.serverKey = upvalue[16]
+		        _G.playerKey = upvalue[17]
+		end
+	end
 --// Virus blocking
 for index, status in pairs(getupvalue(mainHandler.afflictstatus, 1)) do
     if string.match(index, "Virus") ~= nil then
@@ -204,116 +188,117 @@ while true do
     wait(1)
 end
     end,
-})
-local Slider = Tab:CreateSlider({
-    Name = "spawn scrap [DONT GO OVER 1900!!]",
-    Range = {1, 1700},
-    Increment = 10,
-    Suffix = "scrap meter",
-    CurrentValue = 10,
-    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-local DropAmount = 100 
-local Workspace = game:GetService("Workspace")
-local ServerStuff = Workspace.ServerStuff
-local dropAmmo = ServerStuff.dropAmmo
-dropAmmo:FireServer("scrap", Value)
-    end,
- })
+end)
 
- local Button = Tab:CreateButton({
-    Name = "spawn ration: MRE",
-    Callback = function()
-        game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("rations", "MRE")
-    end,
- })
 
- local Button = Tab:CreateButton({
-    Name = "spawn ration: Bottle",
-    Callback = function()
-        game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("rations", "Bottle")
-    end,
- })
- local Button = Tab:CreateButton({
-	Name = "op zealot",
-	Callback = function()
-        local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"].basestats
-        local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"]
-        if perks then
-            perk.name = "Tanziner"
-            perk.desc = "You believe in art of technology."
-            perk.pros = { "Immune to bleeding","Extra M1 Damage","Higher defense" }
-            perk.cons = { "People will dislike you." }
-           perk.activename = "Tanziner"
-           perk.activedetails = "A Man from 2093."
-           perks.atkmod = 1950 -- 2 taps any bosses
-           perks.healthmod = 250
-           perks.defmod = 1500 -- take 1 dmg per hit except explosion
-           perks.stammod = 1950
-           perks.shovemod = 1950
-           perks.lightatkspeed = 100
-            perks.heavyatkspeed = 1950 
-            perks.recoilmod = 2000
-            perks.harvestmod = 100
-            perks.accmod = 1950
-             perks.reloadmod = 250 
-             perks.noaimmod = false 
-             perks.bleed_immune = true
-             perks.mvtmod = 100
-             perks.aegisduration = math.huge
-             perks.aegisdamagetakenmelee = 0
-             perks.aegisrangeddamagemultiplier = 50
-             perks.cooldown = 0
-        end
-    end,
-})
-local Button = Tab:CreateButton({
-	Name = "op arbiter",
-	Callback = function()
-        local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"].basestats
-local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"]
-    perk.name = "Arbiter but your fr SQ"
-    perk.desc = "UJEEUJ"
-    perk.pros = { "More Ammunition.","Speed, No Fall Dmg, No Explosive dmg, and take barely any HP upon shot.","0 Cooldown","Faster Swings"};
-    perk.cons = {"There are no downsides, your just OP as hell."}
-   perk.activename = "Arbiter.exe"
-   perk.activedetails = "i dunno"
-   perks.atkmod = 1950 -- 2 taps any bosses
-   perks.healthmod = 250
-   perks.defmod = 1500 -- take 1 dmg per hit except explosion
-   perks.stammod = 1950
-   perks.shovemod = 1950
-   perks.lightatkspeed = 100
-    perks.heavyatkspeed = 1950 
-    perks.recoilmod = 2000
-    perks.accmod = 1950
-     perks.reloadmod = 900
-     perks.noaimmod = false
-     perks.scavmod = 4000
-     perks.harvestmod = 100
-     perks.mvtmod = 40
-     explosive_resist = true
-     perks.cripple_immune = true
-     perks.exhaust_immune = true
-     perks.frac_immune = true 
-     perks.nomorale = true
-     perks.explosivemod = 400
-     perks.grap = true
-     perks.bleed_immune = true
-    perks.backpack = true
-    perks.falldamagemod = true
-    perks.craftcostmod = -55 
-    end,
-})
-local Button = Tab:CreateButton({
-	Name = "op hivemind",
-	Callback = function()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Info.Slider("Slide me!", 1, 1700, 10, function(Int)
+	local DropAmount = 100 
+	local Workspace = game:GetService("Workspace")
+	local ServerStuff = Workspace.ServerStuff
+	local dropAmmo = ServerStuff.dropAmmo
+	dropAmmo:FireServer("scrap", Int)
+end)
+
+Tab.Button("Spawn MRE", function()
+	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("rations", "MRE")
+end)
+
+Tab.Button("Spawn Bottle", function()
+	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("rations", "Bottle")
+end)
+
+Tab.Button("Buffed Tanziner", function()
+	local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"].basestats
+	local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"]
+	if perks then
+		perk.name = "Tanziner"
+		perk.desc = "You believe in art of technology."
+		perk.pros = { "Immune to bleeding","Extra M1 Damage","Higher defense" }
+		perk.cons = { "People will dislike you." }
+		perk.activename = "Tanziner"
+		perk.activedetails = "A Man from 2093."
+		perks.atkmod = 1950 -- 2 taps any bosses
+		perks.healthmod = 250
+		perks.defmod = 1500 -- take 1 dmg per hit except explosion
+		perks.stammod = 1950
+		perks.shovemod = 1950
+		perks.lightatkspeed = 100
+		perks.heavyatkspeed = 1950 
+		perks.recoilmod = 2000
+		perks.harvestmod = 100
+		perks.accmod = 1950
+		perks.reloadmod = 250 
+		perks.noaimmod = false 
+		perks.bleed_immune = true
+		perks.mvtmod = 100
+		perks.aegisduration = math.huge
+		perks.aegisdamagetakenmelee = 0
+		perks.aegisrangeddamagemultiplier = 50
+		perks.cooldown = 0
+	end
+end)
+
+Tab.Button("Buffed Arbiter", function()
+	local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"].basestats
+	local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"]
+	perk.name = "Arbiter but you're SQ"
+	perk.desc = "UJEEUJ"
+	perk.pros = { "More Ammunition.","Speed, No Fall Dmg, No Explosive dmg, and take barely any HP upon shot.","0 Cooldown","Faster Swings"};
+	perk.cons = {"There are no downsides, you're just OP as hell."}
+	perk.activename = "Arbiter.exe"
+	perk.activedetails = "i dunno"
+	perks.atkmod = 1950 -- 2 taps any bosses
+	perks.healthmod = 250
+	perks.defmod = 1500 -- take 1 dmg per hit except explosion
+	perks.stammod = 1950
+	perks.shovemod = 1950
+	perks.lightatkspeed = 100
+	perks.heavyatkspeed = 1950 
+	perks.recoilmod = 2000
+	perks.accmod = 1950
+	perks.reloadmod = 900
+	perks.noaimmod = false
+	perks.scavmod = 4000
+	perks.harvestmod = 100
+	perks.mvtmod = 40
+	explosive_resist = true
+	perks.cripple_immune = true
+	perks.exhaust_immune = true
+	perks.frac_immune = true 
+	perks.nomorale = true
+	perks.explosivemod = 400
+	perks.grap = true
+	perks.bleed_immune = true
+	perks.backpack = true
+	perks.falldamagemod = true
+	perks.craftcostmod = -55 
+end)
+Tab.Button("Buffed Hivemind", function()
         local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive"].basestats
 local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive"]
-    perk.name = "hivemaster"
+    perk.name = "Hivemaster"
     perk.desc = "UJEEUJ"
     perk.pros = { "More Ammunition.","Speed, No Fall Dmg, No Explosive dmg, and take barely any HP upon shot.","0 Cooldown","Faster Swings"};
-    perk.cons = {"There are no downsides, your just OP as hell."}
+    perk.cons = {"There are no downsides, you're just OP as hell."}
    perk.activename = "Arbiter.exe"
    perk.activedetails = "i dunno"
    perks.atkmod = 1950 -- 2 taps any bosses
@@ -341,12 +326,9 @@ local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive
     perks.backpack = true
     perks.falldamagemod = true
     perks.craftcostmod = -55 
-    end,
-})
+end)
 
-local Button = Tab:CreateButton({
-    Name = "spawn crafted item: AKM",
-    Callback = function()
+Tab.Button("Spawn Crafted: AKM", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -363,12 +345,9 @@ local Button = Tab:CreateButton({
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
         
-    end,
- })
+end)
 
- local Button = Tab:CreateButton({
-    Name = "spawn crafted item: Fireier Axe",
-    Callback = function()
+Tab.Button("Spawn Crafted: Fireier Axe", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -384,12 +363,8 @@ local Button = Tab:CreateButton({
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-     
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "spawn crafted item: The 'Decimator'",
-    Callback = function()
+end)
+Tab.Button("Spawn Crafted: The Decimator", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -405,12 +380,8 @@ local Button = Tab:CreateButton({
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-     
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "spawn crafted item: A.J.M. 9",
-    Callback = function()
+end)
+Tab.Button("Spawn Crafted: A.J.M. 9", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -426,12 +397,8 @@ local Button = Tab:CreateButton({
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-     
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "spawn crafted item: KSG",
-    Callback = function()
+end)
+Tab.Button("Spawn Crafted: KSG", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -447,12 +414,8 @@ local Button = Tab:CreateButton({
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-     
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "spawn crafted item: 'Maria''",
-    Callback = function()
+end
+Tab.Button("Spawn Crafted: Maria", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -468,12 +431,8 @@ local Button = Tab:CreateButton({
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-     
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "spawn crafted item: Billhook",
-    Callback = function()
+end)
+Tab.Button("Spawn Crafted: Billhook", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -489,13 +448,9 @@ local Button = Tab:CreateButton({
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-    
-    end,
- })
+end)
 
- local Button = Tab:CreateButton({
-    Name = "spawn crafted item: Executioner",
-    Callback = function()
+Tab.Button("Spawn Crafted: Executioner", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -511,65 +466,17 @@ local Button = Tab:CreateButton({
         }
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
-  
-    end,
- })
-
-
-
-
-
- local Button = Tab:CreateButton({
-    Name = "weird text in the sky",
-    Callback = function()
-        local dist = 1000
-        local increment = 100
-        local multiply = 100
-        local message = {"HE'S HERE", ""}
-        
-        for points = increment, dist, increment do
-            local gr = (math.sqrt(5) + 1) / 2
-            local ga = (2 - gr) * (2 * math.pi)
-        
-            for index = 1, points do
-                local lat = math.asin(-1 + 2 * index / (points + 1))
-                local lon = ga * index
-        
-                local x = math.cos(lon) * math.cos(lat)
-                local y = math.sin(lon) * math.cos(lat)
-                local z = math.sin(lat)
-        
-                local position = Vector3.new(x, y, z) * Vector3.new(points * multiply, points * multiply, points * multiply)
-                workspace.ServerStuff.applyGore:FireServer("player_ping", nil, nil, { position, message[math.random(1, #message)], -(points + index) })
-            end
-        end
-        
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "esp [M TO REFRESH]",
-    Callback = function()
+end)
+Tab.Button("ESP [M to Refresh]", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/Decaying-Winter-Esp.lua", true))();
-        
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "tp SledgeQueen",
-    Callback = function()
+end)
+Tab.Button("Bring Sledge Queen", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/Sledgequeentp.lua", true))();
-        
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "tp ALL Scavengers",
-    Callback = function()
+end)
+Tab.Button("Bring all Scavengers", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/tp-all-enemy-to-you-in-dw.lua", true))();
-        
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "SOF nametag",
-    Callback = function()
+end)
+Tab.Button("SOF Nametag", function()
         function Respawn()
             workspace.ServerStuff.spawnPlayer:FireServer("respawncharacter")
         end 
@@ -608,28 +515,15 @@ local Button = Tab:CreateButton({
         end
         
         Spawn("Match") --- Match (puts you in match with pvp), HubB (hub with pvp), HubA (hub without pvp), Respawn (puts you back into menu)
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "dupe loot [KILLS YOU]",
-    Callback = function()
-        for i = 1,10 do
+end)
+Tab.Button("Duplicate Inventory", function()
+        for i = 1, 25 do
             task.wait()
             workspace.ServerStuff.deathPlay:FireServer()
             task.wait()
         end
-        
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "inf yield",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "hanger thoughts",
-    Callback = function()
+end)
+Tab.Button("Hangar Thoughts [Press B]", function()
         local uis = game:GetService("UserInputService")
 
 uis.InputBegan:Connect(function(input,gameprocess)
@@ -644,18 +538,32 @@ workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlay
 workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlayer.Character.PrimaryPart, nil)
 end
 end)
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "inf yield",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "funny sound troll",
-    Callback = function()
-        
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab.Button("Global Sound UI", function()
         local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
         
         local Window = Library.CreateLib("Sounds", "Serpent")
@@ -1179,11 +1087,35 @@ end)
         Set:NewKeybind("UI", "UI Keybind", Enum.KeyCode.RightShift, function()
             Library:ToggleUI()
         end)
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "inf stamina",
-    Callback = function()
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab.Button("Infinite Stamina", function()
         repeat
             task.wait()
         until game.Players.LocalPlayer.PlayerGui.mainHUD.StaminaFrame:FindFirstChild("TextLabel") ~= nil
@@ -1223,11 +1155,9 @@ end)
                 until game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health <= 0
             end
         )
-    end,
- })
- local Button = Tab:CreateButton({
-    Name = "control sq [use inf yield]",
-    Callback = function()
+end)
+
+Tab.Button("Control Sledge Queen [Use IY commands]", function()
         local controlling = workspace.activeHostiles["AI_QUEEN"]
         local friendly = true
         game.Players.LocalPlayer.Character = controlling
@@ -1280,6 +1210,7 @@ end)
         end)
         
         end
-        
-    end,
- })
+end)
+
+Info.Label("It is HIGHLY reccomended to use Infinite Yield in this UI!")
+Info.Label("Made by Keozog on Discord")
