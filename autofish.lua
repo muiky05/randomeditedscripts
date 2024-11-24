@@ -126,10 +126,12 @@ local TabH = Main.MakeTab("Ernads AutoFish - Welcome, "..LocalPlayer.Name, 60234
 local Sections = {
     ['Home'] = {
         Info = TabH.MakeSection("Automation")
+	Waypoints = TabH.MakeSection("Waypoints")
     }
 }
 
 local Info = Sections.Home.Info
+local Waypoints = Sections.Home.Waypoints
 
 Info.Toggle("Auto-Fish", false, function(Bool)
 	ToggleFarm(Bool)
@@ -147,6 +149,58 @@ Info.Toggle("Anti-AFK", false, function(Bool)
 	AntiAFK = Bool
 end)
 Info.Label("Made by Keozog on Discord.")
+
+Waypoints.Button("Moosewood", function()
+	rootPart.CFrame = CFrame.new(383,134,241)
+end)
+Waypoints.Button("Roslit Bay", function()
+	rootPart.CFrame = CFrame.new(-1475,132,703)
+end)
+Waypoints.Button("Terrapin Island", function()
+	rootPart.CFrame = CFrame.new(-194,135,1955)
+end)
+Waypoints.Button("Snowcap Island", function()
+	rootPart.CFrame = CFrame.new(2599,135,2413)
+end)
+Waypoints.Button("Dr. Finneus", function()
+	rootPart.CFrame = CFrame.new(1175,132,2456)
+end)
+Waypoints.Button("Mushgrove Swamp", function()
+	rootPart.CFrame = CFrame.new(2470,131,-652)
+end)
+Waypoints.Button("Statue of Soverignty", function()
+	rootPart.CFrame = CFrame.new(19,150,-1024)
+end)
+Waypoints.Button("Sunstone Island", function()
+	rootPart.CFrame = CFrame.new(-1047,202,-1109)
+end)
+Waypoints.Button("Forsaken Shores", function()
+	rootPart.CFrame = CFrame.new(-2483,133,1556)
+end)
+Waypoints.Button("Keepers Altar", function()
+	rootPart.CFrame = CFrame.new(1296,-806,-299)
+end)
+Waypoints.Button("The Depths", function()
+	rootPart.CFrame = CFrame.new(954,-712,1278)
+end)
+Waypoints.Button("Vertigo", function()
+	rootPart.CFrame = CFrame.new(-130,-516,1138)
+end)
+Waypoints.Button("Vertigo's Dip", function()
+	rootPart.CFrame = CFrame.new(-2,-707,1227)
+end)
+Waypoints.Button("The Depths Maze", function()
+	rootPart.CFrame = CFrame.new(1165,-746,1312)
+end)
+Waypoints.Button("Rod of the Depths", function()
+	rootPart.CFrame = CFrame.new(1703,-903,1435)
+end)
+Waypoints.Button("", function()
+	rootPart.CFrame = CFrame.new()
+end)
+Waypoints.Button("", function()
+	rootPart.CFrame = CFrame.new()
+end)
 
 while wait(AutosellInterval) do
 	if AutosellEnabled then
