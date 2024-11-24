@@ -224,8 +224,8 @@ Visual.Toggle("Free GPS", false, function(Bool)
 			XyzClone.Text = "<font color='#ff4949'>X</font><font color = '#a3ff81'>Y</font><font color = '#626aff'>Z</font>: "..StringInput
 		end)
 	else
-		if PlayerGui.hud.safezone.backpack:FindFirstChild("xyz") then
-			PlayerGui.hud.safezone.backpack:FindFirstChild("xyz"):Destroy()
+		if LocalPlayer.PlayerGui.hud.safezone.backpack:FindFirstChild("xyz") then
+			LocalPlayer.PlayerGui.hud.safezone.backpack:FindFirstChild("xyz"):Destroy()
 		end
 		if BypassGpsLoop then
 			BypassGpsLoop:Disconnect()
