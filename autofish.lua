@@ -26,6 +26,10 @@ function hex(hex)
    return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
 end
 
+function ExportValue(arg1, arg2)
+	return tonumber(string.format("%."..(arg2 or 1)..'f', arg1))
+end
+
 function ToggleFarm(Boolean)
 	Enabled = Boolean
 	if not Enabled then
@@ -48,6 +52,21 @@ function AutoSell()
 	workspace:WaitForChild("world"):WaitForChild("npcs"):WaitForChild("Marc Merchant"):WaitForChild("merchant"):WaitForChild("sellall"):InvokeServer()
 	task.wait(3)
 	rootPart.CFrame = currentPosition
+end
+
+function GetPosition()
+	if not Character:FindFirstChild("HumanoidRootPart") then
+		return {
+			Vector3.new(0,0,0),
+			Vector3.new(0,0,0),
+			Vector3.new(0,0,0)
+		}
+	end
+	return {
+		Character:FindFirstChild("HumanoidRootPart").Position.X,
+		Character:FindFirstChild("HumanoidRootPart").Position.Y,
+		Character:FindFirstChild("HumanoidRootPart").Position.Z
+	}
 end
 
 LocalPlayer.Character.ChildAdded:Connect(function(Child)
@@ -194,12 +213,12 @@ end)
 Visual.Toggle("Free GPS", false, function(Bool)
 	if Bool then
 		local XyzClone = game:GetService("ReplicatedStorage").resources.items.items.GPS.GPS.gpsMain.xyz:Clone()
-		XyzClone.Parent = game.Players.LocalPlayer.PlayerGui:WaitForChild("hud"):WaitForChild("safezone"):WaitForChild("backpack")
+		XyzClone.Parent = LocalPlayer.PlayerGui:WaitForChild("hud"):WaitForChild("safezone"):WaitForChild("backpack")
 		local Pos = GetPosition()
 		local StringInput = string.format("%s,%s,%s", ExportValue(Pos[1]), ExportValue(Pos[2]), ExportValue(Pos[3]))
 		XyzClone.Text = "<font color='#ff4949'>X</font><font color = '#a3ff81'>Y</font><font color = '#626aff'>Z</font>: "..StringInput
 			
-		BypassGpsLoop = game:GetService("RunService").Heartbeat:Connect(function() -- Line 26
+		BypassGpsLoop = RunService.Heartbeat:Connect(function()
 			local Pos = GetPosition()
 			StringInput = string.format("%s,%s,%s", ExportValue(Pos[1]), ExportValue(Pos[2]), ExportValue(Pos[3]))
 			XyzClone.Text = "<font color='#ff4949'>X</font><font color = '#a3ff81'>Y</font><font color = '#626aff'>Z</font>: "..StringInput
