@@ -195,12 +195,6 @@ end)
 Waypoints.Button("Rod of the Depths", function()
 	rootPart.CFrame = CFrame.new(1703,-903,1435)
 end)
-Waypoints.Button("", function()
-	rootPart.CFrame = CFrame.new()
-end)
-Waypoints.Button("", function()
-	rootPart.CFrame = CFrame.new()
-end)
 
 while wait(AutosellInterval) do
 	if AutosellEnabled then
