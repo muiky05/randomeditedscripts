@@ -122,7 +122,7 @@ local TabH = Main.MakeTab("Ernads AutoFish - Welcome, "..LocalPlayer.Name, 60234
 
 local Sections = {
     ['Home'] = {
-        Info = TabH.MakeSection("Automation")
+        Info = TabH.MakeSection("Automation"),
 	Waypoints = TabH.MakeSection("Waypoints")
     }
 }
