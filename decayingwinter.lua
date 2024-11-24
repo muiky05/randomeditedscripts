@@ -20,100 +20,97 @@ local Notes = Sections.Main.Notes
 
 Perks.Button("Decaying Winter Admin [Press F9 after running]", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ryderfreeman/decaying-winter-old-goodwill/main/script1'))()
-print([[
-
-COMMANDS CAN BE DONE AS /e command
-
-god - Regens you when you take damage. (Won't save you from dynamite)
-ungod - Turns off semi godmode
-
-nodebuff - Blocks all status effects. Moral, burning, bleeding, broken limbs, etc
-unnodebuff - Turns off no-debuff
-
-nocooldown - Removes all ability cooldowns (F key, assuming you have a perk equipped) (Also gives you inf auxiliary, which is the C key)
-cooldown - Sets your cooldowns back to normal
-
-AMMOTYPE NUMBER - sets your stash of AMMOTYPE to NUMBER (:light 50) (shells 20)
-FOODTYPE NUMBER - sets your stash of FOODTYPE to NUMBER (:mre 20) (:water 5) (:beans 60) (:cola 200)
-
-heal - Heals you, and removes status effects.
-cleareffects - Clears all status effects and debuffs
-
-stopvirus - halts your virus progression
-resetvirus - resets your current virus progression (will not revert stages)
-
-oneshot - enemies you hit will die after one hit
-unoneshot - turns off oneshot
-
-silentaim - makes it so you always hit the enemy closest to your mouse
-unsilentaim - turns off silent aim
-
-infmag - makes your mags bottomless
-uninfmag - makes the weapon you're currently holding no longer have a bottomless mag
-infreserve - sets all your ammo reserves to 900, and keeps them there. !!!!!!DO NOT GO OVER 1K!!!!!!
-uninfreserve - disables infinite reserve ammo, your ammo reserves will stay at 900 though
-
-norecoil - stops your camera from shaking
-unnorecoil - turns off no recoil
-
-nofalldamage - counters fall damage
-unnofalldamage - uncounters fall damage
-
-superrun - enables super run
-unsuperrun - disables super run
-
-nohunger - makes your hunger and thirst bar last indefinitely
-unnohunger - removes no hunger
-fill - fills your hunger and thirst bar
-
-autoparry - automatically counters all incoming melee attacks
-unautoparry - turns off autoparry
-
-killaura - turns killaura on (kills all enemies within a certain distance)
-killaura NUMBER - sets the kill radius for killaura to NUMBER (default is 30)
-unkillaura - turns off killaura
-
-killenemies - kills every enemy that's currently alive
-killenemies NUMBER - kills every enemies within NUMBER studs of you
-
-backpack - Gives you a backpack (gives you 2 more inventory slots)
-
-spawn WEAPONNAME - gives you WEAPONNAME (cannot be dropped) (guns require an empty slot)
-weaponnames - prints all the available weapon names in the dev console
-
-loopdrop ITEMNAME - rapidly drops ITEMNAME
-unloopdrop ITEMNAME
-
-infaux - Gives you infinite auxiliary equipment (Activated with C Key)
-uninfaux - Turns off infaux
-
-settrap TRAPNAME - sets the trap that gets placed when you press the U key
-
-setthrow THROWABLENAME - sets the throwable that's thrown when you press the Y key
-
-uses NUMBER - sets the uses / magazine of your current item to NUMBER
-
-cig - makes you super cool
-uncig - frees you of your nicotine addiction
-
-N Key: Heal and remove effects
-M Key: Remove effects
-U Key: Place set trap (use :settrap TRAPNAME to change the trap set with this key)
-Y Key: Hold to spam throw throwing knives, which one shot enemies
-T Key: Access game & Goodwill GUI
-
-L Key: Toggle super run
-- Key: Lower super run speed
-+ Key: Increase super run speed
-
-
-!! HOLD T TO ACCESS THE GUI (FEATURES IN THE ADMIN, ESP, AND WEAPONRY TABS) !!
-
-- Toggle features in the GOODWILL tab
-- Toggle ESP elements in the ESP tab
-- Customize your held weapon's stats in the WEAPONRY tab
-
-]])
+print("COMMANDS CAN BE DONE AS /e command")
+print("")
+print("god - Regens you when you take damage. (Won't save you from dynamite)")
+print("ungod - Turns off semi godmode")
+print("")
+print("nodebuff - Blocks all status effects. Moral, burning, bleeding, broken limbs, etc")
+print("unnodebuff - Turns off no-debuff")
+print("")
+print("nocooldown - Removes all ability cooldowns (F key, assuming you have a perk equipped) (Also gives you inf auxiliary, which is the C key)")
+print("cooldown - Sets your cooldowns back to normal")
+print("")
+print("AMMOTYPE NUMBER - sets your stash of AMMOTYPE to NUMBER (:light 50) (shells 20)")
+print("FOODTYPE NUMBER - sets your stash of FOODTYPE to NUMBER (:mre 20) (:water 5) (:beans 60) (:cola 200)")
+print("")
+print("heal - Heals you, and removes status effects.")
+print("cleareffects - Clears all status effects and debuffs")
+print("")
+print("stopvirus - halts your virus progression")
+print("resetvirus - resets your current virus progression (will not revert stages)")
+print("")
+print("oneshot - enemies you hit will die after one hit")
+print("unoneshot - turns off oneshot")
+print("")
+print("silentaim - makes it so you always hit the enemy closest to your mouse")
+print("unsilentaim - turns off silent aim")
+print("")
+print("infmag - makes your mags bottomless")
+print("uninfmag - makes the weapon you're currently holding no longer have a bottomless mag")
+print("infreserve - sets all your ammo reserves to 900, and keeps them there. !!!!!!DO NOT GO OVER 1K!!!!!!")
+print("uninfreserve - disables infinite reserve ammo, your ammo reserves will stay at 900 though")
+print("")
+print("norecoil - stops your camera from shaking")
+print("unnorecoil - turns off no recoil")
+print("")
+print("nofalldamage - counters fall damage")
+print("unnofalldamage - uncounters fall damage")
+print("")
+print("superrun - enables super run")
+print("unsuperrun - disables super run")
+print("")
+print("nohunger - makes your hunger and thirst bar last indefinitely")
+print("unnohunger - removes no hunger")
+print("fill - fills your hunger and thirst bar")
+print("")
+print("autoparry - automatically counters all incoming melee attacks")
+print("unautoparry - turns off autoparry")
+print("")
+print("killaura - turns killaura on (kills all enemies within a certain distance)")
+print("killaura NUMBER - sets the kill radius for killaura to NUMBER (default is 30)")
+print("unkillaura - turns off killaura")
+print("")
+print("killenemies - kills every enemy that's currently alive")
+print("killenemies NUMBER - kills every enemies within NUMBER studs of you")
+print("")
+print("backpack - Gives you a backpack (gives you 2 more inventory slots)")
+print("")
+print("spawn WEAPONNAME - gives you WEAPONNAME (cannot be dropped) (guns require an empty slot)")
+print("weaponnames - prints all the available weapon names in the dev console")
+print("")
+print("loopdrop ITEMNAME - rapidly drops ITEMNAME")
+print("unloopdrop ITEMNAME")
+print("")
+print("infaux - Gives you infinite auxiliary equipment (Activated with C Key)")
+print("uninfaux - Turns off infaux")
+print("")
+print("settrap TRAPNAME - sets the trap that gets placed when you press the U key")
+print("")
+print("setthrow THROWABLENAME - sets the throwable that's thrown when you press the Y key")
+print("")
+print("uses NUMBER - sets the uses / magazine of your current item to NUMBER")
+print("")
+print("cig - makes you super cool")
+print("uncig - frees you of your nicotine addiction")
+print("")
+print("N Key: Heal and remove effects")
+print("M Key: Remove effects")
+print("U Key: Place set trap (use :settrap TRAPNAME to change the trap set with this key)")
+print("Y Key: Hold to spam throw throwing knives, which one shot enemies")
+print("T Key: Access game & Goodwill GUI")
+print("")
+print("L Key: Toggle super run")
+print("- Key: Lower super run speed")
+print("+ Key: Increase super run speed")
+print("")
+print("")
+print("!! HOLD T TO ACCESS THE GUI (FEATURES IN THE ADMIN, ESP, AND WEAPONRY TABS) !!")
+print("")
+print("- Toggle features in the GOODWILL tab")
+print("- Toggle ESP elements in the ESP tab")
+print("- Customize your held weapon's stats in the WEAPONRY tab")
+print("")
 end)
 
 
