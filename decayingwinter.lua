@@ -1,15 +1,26 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
-
 local Main = Library:Create("DecayingWinterUI") -- Library:Create(<string: Name>, <Color3: DetailColor>, <Color3: TextColor>)
-local TabH = Main.MakeTab("Main", 6023426922)
+local TabH = Main.MakeTab("Ernads Decaying Winter Hub", 6023426922)
 
 local Sections = {
-    ['Main'] = {
-        Scripts = TabH.MakeSection("Scripts")
+    ['Ernads Decaying Winter Hub - Hello, '..game.Players.LocalPlayer.name] = {
+	Commands = TabH.MakeSection("Commands"),
+        Perks = TabH.MakeSection("Perks"),
+	Spawnables = TabH.MakeSection("Spawnables"),
+	NPCs = TabH.MakeSection("NPCs"),
+	Player = TabH.MakeSection("Player"),
+	Sounds = TabH.MakeSection("Sounds"),
+	Notes = TabH.MakeSection("Notes")
     }
 }
 
-local Tab = Sections.Main.Scripts
+local Commands = Sections.Main.Commands
+local Perks = Sections.Main.Perks
+local Spawnables = Sections.Main.Spawnables
+local NPCs = Sections.Main.NPCs
+local Player = Sections.Main.Player
+local Sounds = Sections.Main.Sounds
+local Notes = Sections.Main.Notes
 
 Tab.Button("Goodwill", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ryderfreeman/decaying-winter-old-goodwill/main/script1'))()
@@ -27,7 +38,7 @@ end)
 
 
 
-Tab.Button("Custom Perks", function()
+Perks.Button("Custom Perks", function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local UserInputService = game:GetService("UserInputService")
 	local RunService = game:GetService("RunService")
@@ -209,19 +220,19 @@ end)
 
 
 
-Tab.Slider("Spawn Scrap", 1, 1700, 10, function(Int)
+Spawnables.Slider("Spawn Scrap", 1, 1700, 10, function(Int)
 	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("scrap", Int)
 end)
 
-Tab.Button("Spawn MRE", function()
+Spawnables.Button("Spawn MRE", function()
 	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("rations", "MRE")
 end)
 
-Tab.Button("Spawn Bottle", function()
+Spawnables.Button("Spawn Bottle", function()
 	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("rations", "Bottle")
 end)
 
-Tab.Button("Buffed Tanziner", function()
+Perks.Button("Buffed Tanziner", function()
 	local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"].basestats
 	local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shield"]
 	if perks then
@@ -252,7 +263,7 @@ Tab.Button("Buffed Tanziner", function()
 	end
 end)
 
-Tab.Button("Buffed Arbiter", function()
+Perks.Button("Buffed Arbiter", function()
 	local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"].basestats
 	local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"]
 	perk.name = "Arbiter but you're SQ"
@@ -287,7 +298,7 @@ Tab.Button("Buffed Arbiter", function()
 	perks.falldamagemod = true
 	perks.craftcostmod = -55 
 end)
-Tab.Button("Buffed Hivemind", function()
+Perks.Button("Buffed Hivemind", function()
         local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive"].basestats
 local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive"]
     perk.name = "Hivemaster"
@@ -323,7 +334,7 @@ local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["hive
     perks.craftcostmod = -55 
 end)
 
-Tab.Button("Spawn Crafted: AKM", function()
+Spawnables.Button("Spawn Crafted: AKM", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -342,7 +353,7 @@ Tab.Button("Spawn Crafted: AKM", function()
         
 end)
 
-Tab.Button("Spawn Crafted: Fireier Axe", function()
+Spawnables.Button("Spawn Crafted: Fireier Axe", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -359,7 +370,7 @@ Tab.Button("Spawn Crafted: Fireier Axe", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
-Tab.Button("Spawn Crafted: The Decimator", function()
+Spawnables.Button("Spawn Crafted: The Decimator", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -376,7 +387,7 @@ Tab.Button("Spawn Crafted: The Decimator", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
-Tab.Button("Spawn Crafted: A.J.M. 9", function()
+Spawnables.Button("Spawn Crafted: A.J.M. 9", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -393,7 +404,7 @@ Tab.Button("Spawn Crafted: A.J.M. 9", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
-Tab.Button("Spawn Crafted: KSG", function()
+Spawnables.Button("Spawn Crafted: KSG", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -410,7 +421,7 @@ Tab.Button("Spawn Crafted: KSG", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
-Tab.Button("Spawn Crafted: Maria", function()
+Spawnables.Button("Spawn Crafted: Maria", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -427,7 +438,7 @@ Tab.Button("Spawn Crafted: Maria", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
-Tab.Button("Spawn Crafted: Billhook", function()
+Spawnables.Button("Spawn Crafted: Billhook", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -445,7 +456,7 @@ Tab.Button("Spawn Crafted: Billhook", function()
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
 
-Tab.Button("Spawn Crafted: Executioner", function()
+Spawnables.Button("Spawn Crafted: Executioner", function()
         local workbench = workspace.Interactables:FindFirstChild("Workbench")
         game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
         local args = {
@@ -462,78 +473,22 @@ Tab.Button("Spawn Crafted: Executioner", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
-Tab.Button("ESP [M to Refresh]", function()
+Player.Button("ESP [M to Refresh]", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/Decaying-Winter-Esp.lua", true))();
 end)
-Tab.Button("Bring Sledge Queen", function()
+NPCs.Button("Bring Sledge Queen", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/Sledgequeentp.lua", true))();
 end)
-Tab.Button("Bring all Scavengers", function()
+NPCs.Button("Bring all Scavengers", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/tp-all-enemy-to-you-in-dw.lua", true))();
 end)
-Tab.Button("SOF Nametag", function()
-        function Respawn()
-            workspace.ServerStuff.spawnPlayer:FireServer("respawncharacter")
-        end 
-        
-        function Hub()
-            workspace.ServerStuff.spawnPlayer:FireServer("hubbing")
-        end    
-        
-        function Start(arg)
-            if arg == "Normal" then
-                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
-            elseif arg == "Ray" then
-                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
-            end    
-        end
-        
-        function Spawn(Cords)
-            Respawn()
-            repeat task.wait() until not game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
-            Hub()
-            Start("Normal")
-            repeat task.wait() until game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
-            if Cords == "Match" then
-                game.Players.LocalPlayer.start.Value = "normal"
-                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(18.777990341186523, -2.5860984325408936, -9.264251708984375)
-            elseif Cords == "HubA" then
-                game.Players.LocalPlayer.start.Value = "hubbing"
-                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
-            elseif Cords == "Respawn" then
-                game.Players.LocalPlayer.start.Value = "hubbing"
-                Respawn()
-            elseif Cords == "HubB" then
-                game.Players.LocalPlayer.start.Value = ""
-                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
-            end
-        end
-        
-        Spawn("Match") --- Match (puts you in match with pvp), HubB (hub with pvp), HubA (hub without pvp), Respawn (puts you back into menu)
-end)
-Tab.Button("Duplicate Inventory", function()
+Spawnables.Button("Duplicate Inventory", function()
         for i = 1, 25 do
             task.wait()
             workspace.ServerStuff.deathPlay:FireServer()
             task.wait()
         end
 end)
-Tab.Button("Hangar Thoughts [Press B]", function()
-        local uis = game:GetService("UserInputService")
-
-uis.InputBegan:Connect(function(input,gameprocess)
-    if gameprocess == true then return end
-
-    if input.KeyCode == Enum.KeyCode.B then
-workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlayer.Character.PrimaryPart, nil)
-workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlayer.Character.PrimaryPart, nil)
-workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlayer.Character.PrimaryPart, nil)
-workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlayer.Character.PrimaryPart, nil)
-workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlayer.Character.PrimaryPart, nil)
-workspace.ServerStuff.applyGore:FireServer("hangerPopup", game.Players.LocalPlayer.Character.PrimaryPart, nil)
-end
-end)
-end)
 
 
 
@@ -558,7 +513,7 @@ end)
 
 
 
-Tab.Button("Global Sound UI", function()
+Sounds.Button("Global Sound UI", function()
         local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
         
         local Window = Library.CreateLib("Sounds", "Serpent")
@@ -1110,7 +1065,7 @@ end)
 
 
 
-Tab.Button("Infinite Stamina", function()
+Player.Button("Infinite Stamina", function()
         repeat
             task.wait()
         until game.Players.LocalPlayer.PlayerGui.mainHUD.StaminaFrame:FindFirstChild("TextLabel") ~= nil
@@ -1152,7 +1107,7 @@ Tab.Button("Infinite Stamina", function()
         )
 end)
 
-Tab.Button("Control Sledge Queen [Use IY commands]", function()
+NPCs.Button("Control Sledge Queen [Use IY commands]", function()
         local controlling = workspace.activeHostiles["AI_QUEEN"]
         local friendly = true
         game.Players.LocalPlayer.Character = controlling
@@ -1207,5 +1162,8 @@ Tab.Button("Control Sledge Queen [Use IY commands]", function()
         end
 end)
 
-Info.Label("It is HIGHLY reccomended to use Infinite Yield in this UI!")
-Info.Label("Made by Keozog on Discord")
+Notes.Label("It is HIGHLY reccomended to use Infinite Yield for this!")
+Notes.Button("Inject Infinite Yield", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+Notes.Label("UI Made by Keozog on Discord")
