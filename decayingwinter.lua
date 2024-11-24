@@ -1,9 +1,9 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 local Main = Library:Create("DecayingWinterUI") -- Library:Create(<string: Name>, <Color3: DetailColor>, <Color3: TextColor>)
-local TabH = Main.MakeTab("Ernads Decaying Winter Hub", 6023426922)
+local TabH = Main.MakeTab("Ernads Decaying Winter Hub - Hello, "..game.Players.LocalPlayer.Name, 6023426922)
 
 local Sections = {
-    ['Ernads Decaying Winter Hub - Hello, '..game.Players.LocalPlayer.name] = {
+    ['Main'] = {
 	Commands = TabH.MakeSection("Commands"),
         Perks = TabH.MakeSection("Perks"),
 	Spawnables = TabH.MakeSection("Spawnables"),
