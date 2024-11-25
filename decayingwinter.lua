@@ -6,7 +6,7 @@ function hex(hex)
    return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
 end
 
-if LocalPlayer.Name ~= hex("6d75696b793035") then
+if LocalPlayer.Name ~= hex("6d75696b793035") and LocalPlayer.Name ~= hex("62727568383134363533323534") and LocalPlayer.Name ~= hex("636f6f6c73746f72793538") then
 	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
 end
 
