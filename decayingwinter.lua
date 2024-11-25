@@ -1,6 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 local Main = Library:Create("DecayingWinterUI") -- Library:Create(<string: Name>, <Color3: DetailColor>, <Color3: TextColor>)
 local TabH = Main.MakeTab("Ernads Decaying Winter Hub - Hello, "..game.Players.LocalPlayer.Name, 6023426922)
+local LocalPlayer = game.Players.LocalPlayer
 
 function hex(hex)
    return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
