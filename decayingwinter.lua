@@ -578,7 +578,7 @@ Humanoids.Button("Bring all Scavengers", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/bigblackmonkeyboi/scip/main/tp-all-enemy-to-you-in-dw.lua", true))();
 end)
 Spawnables.Button("Duplicate Inventory", function()
-        for i = 1, 25 do
+        for i = 1, 10 do
             task.wait()
             workspace.ServerStuff.deathPlay:FireServer()
             task.wait()
