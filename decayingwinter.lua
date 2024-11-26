@@ -915,33 +915,6 @@ end)
 Sounds.Dropdown("Voicelines", {"taunt1", "taunt2", "taunt3", "taunt4"}, function(String)
 	Play:FireServer({"events", "hiddenB"}, String, workspace)
 end)
-end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Humanoids.Button("Infinite Stamina", function()
         repeat
