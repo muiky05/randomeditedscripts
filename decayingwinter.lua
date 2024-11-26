@@ -10,6 +10,7 @@ local Lighting = game:GetService("Lighting")
 local Players = game:GetService("Players")
 local mainHandler = { instance = nil, senv = nil }
 local IsRegenning
+local RegenAmount
 local Play = game:GetService("Workspace").ServerStuff.playAudio
 
 function hex(hex)
@@ -36,9 +37,15 @@ local Humanoids = Sections.Main.Humanoids
 local Sounds = Sections.Main.Sounds
 local Notes = Sections.Main.Notes
 
-Humanoids.Toggle("Infinite Regeneration", false, function(Bool)
+Humanoids.Toggle("Enable Regeneration", false, function(Bool)
 	IsRegenning = Bool
 end)
+Humanoids.Slider("Regeneration Strength", 1, 10, 1, function(Int)
+    RegenAmount = Int
+end)
+Humanoids.Label("All strengths survive all guns.")
+Humanoids.Label("3+ can survive Castle.")
+Humanoids.Label("8+ can survive some explosives.")
 
 Perks.Button("Custom Perks", function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -1019,34 +1026,39 @@ Notes.Button("Inject Infinite Yield", function()
 end)
 Notes.Label("Hub made by Keozog on Discord")
 
+local serverkey
+local playerkey
+
 function getkey()
 	spawn(function()
 	for _, instance in pairs(LocalPlayer.Backpack:GetChildren()) do
 	    	if instance:IsA("LocalScript") and instance.Name ~= "ClickDetectorScript" then
 			repeat
-	    	        mainHandler = getsenv(instance)
-	    	        RunService.Heartbeat:Wait()
+	    	    mainHandler = getsenv(instance)
+	    	    RunService.Heartbeat:Wait()
 			until mainHandler.afflictstatus ~= nil
 			local upvalue = getupvalues(mainHandler.afflictstatus)
-		        _G.serverKey = upvalue[16]
-		        _G.playerKey = upvalue[17]
+		        serverkey = upvalue[16]
+		        playerkey = upvalue[17]
 			end
 		end
 	end)
 end
 
+local delaygetkey
+
 while task.wait() do
+	if not delaygetkey then getkey() delaygetkey = 0 end
 	if IsRegenning then
-		getkey()
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-		game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
+		if RegenAmount == nil then RegenAmount = 1 end
+		for i = 1, RegenAmount do
+			game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, serverkey, playerkey)
+		end
+		delaygetkey += 1
+		if delaygetkey == 50 then
+			print("got key")
+			getkey()
+			delaygetkey = 0
+		end
 	end
 end
