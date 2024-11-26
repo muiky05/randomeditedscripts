@@ -10,7 +10,7 @@ local HH = bot.Character.Humanoid.HipHeight
 
 for i, plr in pairs(game.Players:GetPlayers()) do
 	for i, obj in pairs(plr:GetChildren()) do
-		if obj.Name == "LunarBotBlacklist" then
+		if obj.Name == "BotBlacklist" then
 			obj:Destroy()		
 		end
 	end
@@ -20,11 +20,11 @@ end
 
 local whitelisted = {
 	bot.Name,
-	"muiky05",
-	"Coolme2728",
+	ownerName
 }
 
-local showbotchat = _G.showBotChat or false --setting this to true will cause all messages sent by either commands or LunarBot to begin with [LunarBot]
+
+local showbotchat = _G.showBotChat or false --setting this to true will cause all messages sent by either commands or to begin with [Bot]
 local allwhitelisted = _G.defaultAllWhitelisted or false --set to true if you want everyone to be whitelisted, nicK is not responsible for anything players make you do or say.
 local randommoveinteger = _G.defaultRandomMoveInteger or 15 --interval in which how long randommove waits until choosing another direction
 local prefix = _G.defaultPrefix or "." --DO NOT SET TO MORE THAN 1 CHARACTER!
@@ -36,14 +36,14 @@ if _G.preWhitelisted and type(_G.preWhitelisted) == "table" then
 end
 
 if prefix:len() > 1 then
-	warn("LunarBot // Prefix cannot be more than 1 character long!")
+	warn("Bot // Prefix cannot be more than 1 character long!")
 	return
 end
 
 --[[ end configs, don't edit this especially if you have no idea what Lua is lmao ]]--
 
-local lunarbotversion = "v0.1.3 Public Beta Release"
-local lunarbotchangelogs = "Added a few commands!"
+local botversion = "v0.1.3 Public Beta Release"
+local botchangelogs = "Added a few commands!"
 
 local gameData = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 local status = nil
@@ -218,7 +218,7 @@ commands = {
 	reset = {
 		Name = "reset",
 		Aliases = {"re"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawns bot!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local hum = bot.Character:FindFirstChildWhichIsA("Humanoid")
@@ -231,18 +231,18 @@ commands = {
 	rejoin = {
 		Name = "rejoin",
 		Aliases = {"rj"},
-		Use = "Rejoins LunarBot!",
+		Use = "Rejoins bot!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			if speaker ~= bot.Name and altctrl == false then chat("Invalid permissions to rejoin.") return end
 		
 			if #game.Players:GetPlayers() <= 1 then
 				print("Rejoining (NEW SERVER)")
-				game.Players.LocalPlayer:Kick("\nLunarBot - Rejoining...")
+				game.Players.LocalPlayer:Kick("\nBot - Rejoining...")
 				wait()
 				game:GetService('TeleportService'):Teleport(game.PlaceId, game.Players.LocalPlayer)
 			else
-				print("LunarBot is rejoining...")
+				print("Bot is rejoining...")
 				game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
 			end
 		end,
@@ -250,7 +250,7 @@ commands = {
 	catch = {
 		Name = "catch",
 		Aliases = {"catchin4k", "c14"},
-		Use = "Makes LunarBot catch the given player in 4K!",
+		Use = "Makes bot catch the given player in 4K!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local plr
@@ -283,7 +283,7 @@ commands = {
 	ping = {
 		Name = "ping",
 		Aliases = {"getping"},
-		Use = "Chats LunarBot's ping!",
+		Use = "Chats bot's ping!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			chat("Ping: " .. tostring(math.floor(game:GetService("Stats").PerformanceStats.Ping:GetValue() + 0.5)) .. " ms")
@@ -292,7 +292,7 @@ commands = {
 	executor = {
 		Name = "executor",
 		Aliases = {"identifyexecutor", "getexec", "exec"},
-		Use = "Gives you the executor that is running LunarBot!",
+		Use = "Gives you the executor that is running!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			chat("Executor: " .. identifyexecutor() or "Unknown")
@@ -301,11 +301,11 @@ commands = {
 	lua = {
 		Name = "lua",
 		Aliases = {"runlua", "run", "luau"},
-		Use = "Gives you the executor that is running LunarBot!",
+		Use = "Gives you the executor that is running!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			if speaker ~= bot.Name then
-				chat("You do not have permission to run LuaU from LunarBot.")
+				chat("You do not have permission to run LuaU.")
 				return
 			end
 			
@@ -325,7 +325,7 @@ commands = {
 	setinterval = {
 		Name = "setinterval",
 		Aliases = {"setrandommoveinterval", "setint", "setinteger"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawns!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			if speaker ~= bot.Name then return end
@@ -339,7 +339,7 @@ commands = {
 	toggleall = {
 		Name = "toggleall",
 		Aliases = {"all", "allwl", "wlall"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawns!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			task.spawn(function()
@@ -383,7 +383,7 @@ commands = {
 	unfollow = {
 		Name = "unfollow",
 		Aliases = {"unfollowplr"},
-		Use = "Respawns LunarBot!",
+		Use = "Respawns!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -398,7 +398,7 @@ commands = {
 	follow = {
 		Name = "follow",
 		Aliases = {"followplr"},
-		Use = "Makes LunarBot follow you or the given player!",
+		Use = "Makes bot follow you or the given player!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local plr
@@ -472,14 +472,14 @@ commands = {
 			local chosen = choosefrom[math.random(1, #choosefrom)]
 			
 			if chosen then
-				chat("LunarBot chose: " .. chosen)
+				chat("Bot chose: " .. chosen)
 			end
 		end,
 	},
 	dance = {
 		Name = "dance",
 		Aliases = {},
-		Use = "Makes LunarBot dance!",
+		Use = "Makes dance!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e dance")
@@ -488,7 +488,7 @@ commands = {
 	point = {
 		Name = "point",
 		Aliases = {},
-		Use = "Makes LunarBot point!",
+		Use = "Makes bot point!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e point")
@@ -497,7 +497,7 @@ commands = {
 	stadium = {
 		Name = "stadium",
 		Aliases = {},
-		Use = "Makes LunarBot do the stadium emote!",
+		Use = "Makes bot do the stadium emote!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e stadium")
@@ -506,7 +506,7 @@ commands = {
 	cheer = {
 		Name = "cheer",
 		Aliases = {},
-		Use = "Makes LunarBot cheer!",
+		Use = "Makes bot cheer!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e cheer")
@@ -515,7 +515,7 @@ commands = {
 	wave = {
 		Name = "wave",
 		Aliases = {},
-		Use = "Makes LunarBot wave!",
+		Use = "Makes bot wave!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game:GetService("Players"):Chat("/e wave")
@@ -524,7 +524,7 @@ commands = {
 	sit = {
 		Name = "sit",
 		Aliases = {},
-		Use = "Makes LunarBot sit!",
+		Use = "Makes bot sit!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			bot.Character.Humanoid.Sit = true
@@ -533,7 +533,7 @@ commands = {
 	salute = {
 		Name = "salute",
 		Aliases = {},
-		Use = "Makes LunarBot salute!",
+		Use = "Makes bot salute!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			game.Players:Chat("/e salute")
@@ -542,7 +542,7 @@ commands = {
 	jump = {
 		Name = "jump",
 		Aliases = {},
-		Use = "Makes LunarBot jump!",
+		Use = "Makes bot jump!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			bot.Character.Humanoid.Jump = true
@@ -566,7 +566,7 @@ commands = {
 	whitelist = {
 		Name = "whitelist",
 		Aliases = {"wl"},
-		Use = "Whitelists a player, meaning they can use LunarBot. An owner-only command!",
+		Use = "Whitelists a player, meaning they can use the bot. An owner-only command!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local towhitelist = args[2]
@@ -577,7 +577,7 @@ commands = {
 				if towhitelist == "all" then
 					for i, player in pairs(game.Players:GetPlayers()) do
 						table.insert(whitelisted, player.Name)
-						local bl = player:FindFirstChild("LunarBotBlacklist")
+						local bl = player:FindFirstChild("BotBlacklist")
 						if bl then bl:Destroy() else warn(player.DisplayName .. " was not blacklisted!") end
 					end
 					
@@ -589,7 +589,7 @@ commands = {
 					
 					if plr then
 						table.insert(whitelisted, plr.Name)
-						local bl = plr:FindFirstChild("LunarBotBlacklist")
+						local bl = plr:FindFirstChild("BotBlacklist")
 						if bl then bl:Destroy() else warn(player.DisplayName .. " was not blacklisted!") end
 						chat("Whitelisted " .. plr.DisplayName .. "! Type .cmds to view commands.")
 					else
@@ -602,7 +602,7 @@ commands = {
 	blacklist = {
 		Name = "blacklist",
 		Aliases = {"bl"},
-		Use = "Blacklists a player meaning they cannot use LunarBot. Owner-only command!",
+		Use = "Blacklists a player meaning they cannot use bot commands. Owner-only command!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			local toblacklist = args[2]
@@ -612,13 +612,13 @@ commands = {
 			if toblacklist then
 				if toblacklist == "all" then
 					for i, p in pairs(game.Players:GetPlayers()) do
-						local alrbl = p:FindFirstChild("LunarBotBlacklist")
+						local alrbl = p:FindFirstChild("BotBlacklist")
 						
 						if alrbl then alrbl:Destroy() end
 					
 						local new = Instance.new("BoolValue")
 						new.Parent = p
-						new.Name = "LunarBotBlacklist"
+						new.Name = "BotBlacklist"
 						new.Value = true
 					end
 					
@@ -629,13 +629,13 @@ commands = {
 					local plr = searchPlayers(toblacklist)
 					
 					if plr then
-						local alrbl = plr:FindFirstChild("LunarBotBlacklist")
+						local alrbl = plr:FindFirstChild("BotBlacklist")
 						
 						if alrbl then alrbl:Destroy() end
 					
 						local new = Instance.new("BoolValue")
 						new.Parent = plr
-						new.Name = "LunarBotBlacklist"
+						new.Name = "BotBlacklist"
 						new.Value = true
 						alwhitelisted = false
 						chat("Blacklisted " .. plr.DisplayName .. "! They can no longer run commands.")
@@ -673,7 +673,7 @@ commands = {
 				local rnd = math.random(tonumber(args[2]), tonumber(args[3]))
 				
 				if rnd then
-					chat("LunarBot // Generated random number between " .. args[2] .. " and " .. args[3] .. ": " .. rnd)
+					chat("Bot // Generated random number between " .. args[2] .. " and " .. args[3] .. ": " .. rnd)
 				else
 					chat("Aw, snap! An error occured while generating a random number.")
 				end
@@ -683,7 +683,7 @@ commands = {
 	bring = {
 		Name = "bring",
 		Aliases = {},
-		Use = "Brings LunarBot to the player that chatted the command.",
+		Use = "Brings bot to the player that chatted the command.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -698,7 +698,7 @@ commands = {
 	copychat = {
 		Name = "copychat",
 		Aliases = {"cc", "copyc", "cchat"},
-		Use = "Makes LunarBot copy everything the given player says.",
+		Use = "Copies everything the given player says.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -726,7 +726,7 @@ commands = {
 	uncopychat = {
 		Name = "uncopychat",
 		Aliases = {"uncc", "uncopyc", "uncchat"},
-		Use = "Makes LunarBot stop copying everything the copychat player says.",
+		Use = "Makes bot stop copying everything the copychat player says.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -734,7 +734,7 @@ commands = {
 					chat("Stopped copying " .. copychatplayer.DisplayName .. "!")
 					copychatplayer = nil
 				else
-					chat("LunarBot is not copying anyone!")
+					chat("Bot is not copying anyone!")
 				end
 			end)
 		end,
@@ -742,7 +742,7 @@ commands = {
 	to = {
 		Name = "to",
 		Aliases = {},
-		Use = "Teleports LunarBot to the <player> given.",
+		Use = "Teleports bot to the <player> given.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -769,7 +769,7 @@ commands = {
 	walkto = {
 		Name = "walkto",
 		Aliases = {"come"},
-		Use = "Makes LunarBot walk to you or the given player!",
+		Use = "Makes bot walk to you or the given player!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -794,7 +794,7 @@ commands = {
 	setprefix = {
 		Name = "setprefix",
 		Aliases = {"prefix"},
-		Use = "Sets the prefix of LunarBot! Owner-only command!",
+		Use = "Sets the prefix of bot! Owner-only command!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -815,7 +815,7 @@ commands = {
 	setstatus = {
 		Name = "setstatus",
 		Aliases = {},
-		Use = "Sets the status of LunarBot. When a status is set, the bot will no longer take commands.",
+		Use = "Sets the status of bot. When a status is set, the bot will no longer take commands.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -862,11 +862,11 @@ commands = {
 	time = {
 		Name = "time",
 		Aliases = {"currenttime"},
-		Use = "Gives you LunarBot's current time in its timezone.",
+		Use = "Gives you bot's current time in its timezone.",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
-				chat("LunarBot's current time is: " .. os.date("%I:%M:%S %p"))
+				chat("Bot's current time is: " .. os.date("%I:%M:%S %p"))
 			end)
 		end,
 	},
@@ -894,7 +894,7 @@ commands = {
 	walkspeed = {
 		Name = "walkspeed",
 		Aliases = {"speed"},
-		Use = "Sets LunarBot's walkspeed to <speed>!",
+		Use = "Sets bot's walkspeed to <speed>!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -915,7 +915,7 @@ commands = {
 	fps = {
 		Name = "fps",
 		Aliases = {},
-		Use = "Chats LunarBot's current FPS!",
+		Use = "Chats bot's current FPS!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -1047,7 +1047,7 @@ commands = {
 	randommove = {
 		Name = "randommove",
 		Aliases = {"rndmove", "autowalk"},
-		Use = "Toggles LunarBot's random movement feature!",
+		Use = "Toggles bot's random movement feature!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -1064,7 +1064,7 @@ commands = {
 	rush = {
 		Name = "rush",
 		Aliases = {"rushbegin"},
-		Use = "Makes LunarBot turn into Rush from DOORS!",
+		Use = "Makes bot turn into Rush from DOORS!",
 		Enabled = true,
 		CommandFunction = function(msg, args, speaker)
 			pcall(function()
@@ -1196,7 +1196,7 @@ local cmdcon = messageReceived:Connect(function(data)
 	local msg = string.lower(message)
 	
 	if string.sub(msg, 1, 1) == prefix then
-		if speakerplayer:FindFirstChild("LunarBotBlacklist") then
+		if speakerplayer:FindFirstChild("BotBlacklist") then
 			return
 		end
 
@@ -1220,7 +1220,7 @@ local cmdcon = messageReceived:Connect(function(data)
 		if cmd ~= nil then
 			if cmd.Enabled == false then
 				chat("The command " .. cmd.Name .. " is currently disabled. Please request it to be re-enabled by " .. bot.DisplayName .. ".")
-				print("LunarBot CMDLogs // " .. speaker .. " attempted to run command: " .. cmd.Name .. " with arguments: " .. tts(args) .. "while the command was disabled.")
+				print("Bot CMDLogs // " .. speaker .. " attempted to run command: " .. cmd.Name .. " with arguments: " .. tts(args) .. "while the command was disabled.")
 				return
 			else
 				cmd.CommandFunction(message, args, speaker)
@@ -1235,7 +1235,7 @@ local cmdcon = messageReceived:Connect(function(data)
 					return r
 				end
 				
-				print("LunarBot CMDLogs // " .. speaker .. " ran command: " .. cmd.Name .. " with arguments: " .. tts(args))
+				print("Bot CMDLogs // " .. speaker .. " ran command: " .. cmd.Name .. " with arguments: " .. tts(args))
 			end
 		else
 			warn("Could not find command: " .. args[1] .. "!")
