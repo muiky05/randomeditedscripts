@@ -174,7 +174,7 @@ local alert = Instance.new("Sound",game:GetService("SoundService"))
 alert.SoundId = "rbxassetid://232127604"
 --// controlsGui
 gui.Enabled = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/IrishBaker/scripts/main/decaying%20winter/Announce.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/muiky05/randomeditedscripts/refs/heads/main/dwnotifs.lua"))()
 function Callback(answer)
     if answer == "Yes" then
         wait(2)
