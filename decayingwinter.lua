@@ -2,6 +2,13 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeT
 local Main = Library:Create("DecayingWinterUI") -- Library:Create(<string: Name>, <Color3: DetailColor>, <Color3: TextColor>)
 local TabH = Main.MakeTab("Ernads Decaying Winter Hub - Hello, "..game.Players.LocalPlayer.Name, 6023426922)
 local LocalPlayer = game.Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local StarterGui = game:GetService("StarterGui")
+local Lighting = game:GetService("Lighting")
+local Players = game:GetService("Players")
+local mainHandler = { instance = nil, senv = nil }
 
 function hex(hex)
    return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
@@ -27,8 +34,10 @@ local Humanoids = Sections.Main.Humanoids
 local Sounds = Sections.Main.Sounds
 local Notes = Sections.Main.Notes
 
-Perks.Button("Decaying Winter Admin [Press F9 after running]", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ryderfreeman/decaying-winter-old-goodwill/main/script1'))()
+local IsRegenning = false
+
+Humanoids.Toggle("Infinite Regeneration", false, function(Bool)
+	IsRegenning = Bool
 end)
 
 Perks.Button("Custom Perks", function()
@@ -133,19 +142,6 @@ UserInputService.InputBegan:Connect(function(input, Typing)
 	    workspace.ServerStuff.dealDamage:FireServer("fireSmoke", workspace.CurrentCamera.CFrame, _G.serverKey, _G.playerKey)
     end
 end)
---// heal
-UserInputService.InputBegan:Connect(function(input, Typing)
-    if Typing then
-        return
-    end
-	if input.KeyCode == Enum.KeyCode.J then
-	    for i=1, 10 do
-	        game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
-	        wait(0.1)
-        end
-    end
-end)
-
 UserInputService.InputBegan:Connect(function(input, Typing)
     if Typing then
         return
@@ -1160,3 +1156,23 @@ Notes.Button("Inject Infinite Yield", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 Notes.Label("Hub made by Keozog on Discord")
+
+function getkey()
+	spawn(function()
+	for _, instance in pairs(LocalPlayer.Backpack:GetChildren()) do
+	    	if instance:IsA("LocalScript") and instance.Name ~= "ClickDetectorScript" then
+			repeat
+	    	        mainHandler = getsenv(instance)
+	    	        RunService.Heartbeat:Wait()
+			until mainHandler.afflictstatus ~= nil
+			local upvalue = getupvalues(mainHandler.afflictstatus)
+		        _G.serverKey = upvalue[16]
+		        _G.playerKey = upvalue[17]
+		end
+	end)
+end
+
+while IsRegenning do
+	game.Workspace.ServerStuff.dealDamage:FireServer("Regeneration", nil, _G.serverKey, _G.playerKey)
+	task.wait(0.1)
+end
