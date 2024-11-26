@@ -20,12 +20,6 @@ game.StarterGui:SetCore("SendNotification", {
 })
 wait(3)
 game.StarterGui:SetCore("SendNotification", {
-    Title = 'Heal';
-    Text = "J to heal yourself.";
-    Icon = "rbxassetid://2541869220";
-    Duration = 4;
-})
-game.StarterGui:SetCore("SendNotification", {
     Title = 'Food';
     Text = "L to drop yourself food.";
     Icon = "rbxassetid://2541869220";
