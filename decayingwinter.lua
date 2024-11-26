@@ -12,14 +12,20 @@ local mainHandler = { instance = nil, senv = nil }
 local IsRegenning
 local RegenAmount
 local Play = game:GetService("Workspace").ServerStuff.playAudio
+local wl
 
-function hex(hex)
-   return tostring((hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end)))
-end
+local wlTable = {
+"muiky05",
+"bruh814653264",
+"runeexecutorreal"
+}
 
-if LocalPlayer.Name ~= hex("6d75696b793035") and LocalPlayer.Name ~= hex("62727568383134363533323534") and LocalPlayer.Name ~= hex("72756e656578656375746f727265616c") then
-	LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.")
+for i = 1, #wlTable do
+	if (wlTable[i] == value) then
+		wl = true
+	end
 end
+if wl = false then LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") end
 
 local Sections = {
     ['Main'] = {
