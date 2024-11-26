@@ -25,7 +25,7 @@ for i = 1, #wlTable do
 		wl = true
 	end
 end
-if wl = false then LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") end
+if wl == false then LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") end
 
 local Sections = {
     ['Main'] = {
