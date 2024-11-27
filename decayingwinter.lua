@@ -222,7 +222,7 @@ end)
 
 
 
-Spawnables.Slider("Spawn Scrap [NO COOLDOWN]", 1, 1700, 10, function(Int)
+Spawnables.Slider("Spawn Scrap [NO COOLDOWN]", 1, 1500, 10, function(Int)
 	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("scrap", Int)
 end)
 
