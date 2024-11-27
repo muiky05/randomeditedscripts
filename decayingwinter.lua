@@ -203,26 +203,6 @@ while true do
 end
 end)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Spawnables.Slider("Spawn Scrap [NO COOLDOWN]", 1, 1000, 10, function(Int)
 	game:GetService("Workspace").ServerStuff.dropAmmo:FireServer("scrap", Int)
 end)
@@ -1035,23 +1015,6 @@ Notes.Label("Hub made by Keozog on Discord")
 
 local serverkey
 local playerkey
-
-function getkey()
-	spawn(function()
-	for _, instance in pairs(LocalPlayer.Backpack:GetChildren()) do
-	    	if instance:IsA("LocalScript") and instance.Name ~= "ClickDetectorScript" then
-			repeat
-	    	    mainHandler = getsenv(instance)
-	    	    RunService.Heartbeat:Wait()
-			until mainHandler.afflictstatus ~= nil
-			local upvalue = getupvalues(mainHandler.afflictstatus)
-		        serverkey = upvalue[16]
-		        playerkey = upvalue[17]
-			end
-		end
-	end)
-end
-
 local delaygetkey
 
 while task.wait() do
@@ -1064,7 +1027,19 @@ while task.wait() do
 		delaygetkey += 1
 		if delaygetkey == 50 then
 			print("got key")
-			getkey()
+			spawn(function()
+				for _, instance in pairs(LocalPlayer.Backpack:GetChildren()) do
+	    				if instance:IsA("LocalScript") and instance.Name ~= "ClickDetectorScript" then
+						repeat
+							mainHandler = getsenv(instance)
+	    						RunService.Heartbeat:Wait()
+						until mainHandler.afflictstatus ~= nil
+						local upvalue = getupvalues(mainHandler.afflictstatus)
+		        			serverkey = upvalue[16]
+		        			playerkey = upvalue[17]
+					end
+				end
+			end)
 			delaygetkey = 0
 		end
 	end
