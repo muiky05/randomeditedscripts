@@ -17,7 +17,8 @@ local wl
 local wlTable = {
 "muiky05",
 "bruh814653264",
-"runeexecutorreal"
+"runeexecutorreal",
+"arnoying",
 }
 
 for i = 1, #wlTable do
