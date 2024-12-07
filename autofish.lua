@@ -26,7 +26,7 @@ local wl
 local wlTable = {
 "JasonFireballs",
 "muiky05",
-"coolstorybro786",
+"BuzzingSneeze1",
 "txast3rsmaf1a",
 "wesleyapollo"
 }
