@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
-local Main = Library:Create("Ernads Autofish")
-local TabH = Main.MakeTab("Ernads Ant War GUI - Welcome, "..LocalPlayer.Name, 6023426922)
+local Main = Library:Create("Ernads Ant War GUI")
+local TabH = Main.MakeTab("Ernads Ant War GUI - Welcome, "..game.Players.LocalPlayer.Name, 6023426922)
 
 
 local Sections = {
@@ -12,7 +12,7 @@ local Sections = {
 local Main = Sections.Home.Main
 local killaura
 
-Automation.Toggle("Auto-Attack (+Attack Speed)", false, function(Bool)
+Main.Toggle("Auto-Attack (+Attack Speed)", false, function(Bool)
 	killaura = Bool
 end)
 
