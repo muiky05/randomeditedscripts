@@ -16,7 +16,7 @@ Main.Toggle("Auto-Attack (+Attack Speed)", false, function(Bool)
 	killaura = Bool
 end)
 
-local function findClosestPlayer()
+function findClosestPlayer()
     local myPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
     local closestPlayer = nil
     local shortestDistance = math.huge
