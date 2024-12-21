@@ -1018,7 +1018,7 @@ local playerkey
 local delaygetkey
 
 while task.wait() do
-	if not delaygetkey then getkey() delaygetkey = 0 end
+	if not delaygetkey then delaygetkey = 0 end
 	if IsRegenning then
 		if RegenAmount == nil then RegenAmount = 1 end
 		for i = 1, RegenAmount do
