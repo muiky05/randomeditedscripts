@@ -28,7 +28,8 @@ local wlTable = {
 "muiky05",
 "BuzzingSneeze1",
 "txast3rsmaf1a",
-"wesleyapollo"
+"wesleyapollo",
+"coolstorybro786",
 }
 
 for i = 1, #wlTable do
