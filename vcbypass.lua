@@ -8,7 +8,6 @@ local wl = false
 
 local wlTable = {
 "muiky05",
-"Metaquestappstore",
 }
 
 for i = 1, #wlTable do
