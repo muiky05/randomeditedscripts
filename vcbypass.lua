@@ -4,14 +4,14 @@ local VoiceChatService = game:GetService('VoiceChatService')
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 
 local LocalPlayer = Players.LocalPlayer
-local wl
+local wl = false
 
 local wlTable = {
 "muiky05",
 }
 
 for i = 1, #wlTable do
-	if (wlTable[i] == value) then
+	if (wlTable[i] == Players.LocalPlayer.Name) then
 		wl = true
 	end
 end
