@@ -27,7 +27,7 @@ local Sections = {
     }
 }
 
-local Automation = Sections.Home.Automation
+local Bypass = Sections.Home.Bypass
 
 Bypass.Button("Unban VC", function()
   VoiceChatService:joinVoice()
