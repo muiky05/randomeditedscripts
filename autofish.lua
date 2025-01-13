@@ -21,7 +21,7 @@ local Keybind = Enum.KeyCode.F
 local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 local StartedFishingPosition = CFrame.new()
 local rootPart = Character:WaitForChild("HumanoidRootPart")
-local wl
+local wl = false
 
 local wlTable = {
 "JasonFireballs",
@@ -34,7 +34,7 @@ local wlTable = {
 }
 
 for i = 1, #wlTable do
-	if (wlTable[i] == value) then
+	if (wlTable[i] == Players.LocalPlayer.Name) then
 		wl = true
 	end
 end
