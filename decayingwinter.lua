@@ -12,7 +12,7 @@ local mainHandler = { instance = nil, senv = nil }
 local IsRegenning
 local RegenAmount
 local Play = game:GetService("Workspace").ServerStuff.playAudio
-local wl
+local wl = false
 
 local wlTable = {
 "muiky05",
@@ -23,7 +23,7 @@ local wlTable = {
 }
 
 for i = 1, #wlTable do
-	if (wlTable[i] == value) then
+	if (wlTable[i] == Players.LocalPlayer.Name) then
 		wl = true
 	end
 end
