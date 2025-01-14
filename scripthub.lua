@@ -1,7 +1,7 @@
-if script then
-  if script == "bothub" then
+if menutype then
+  if menutype == "bothub" then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/muiky05/randomeditedscripts/refs/heads/main/bot.lua'))()
-  elseif script == "vcbypass" then
+  elseif menutype == "vcbypass" then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/muiky05/randomeditedscripts/refs/heads/main/vcbypass.lua'))()
   end
 else
