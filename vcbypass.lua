@@ -10,6 +10,7 @@ local wlTable = {
 "muiky05",
 "wesleyapollo",
 "IMP0STER_SUSSY",
+"powerfulpants3",
 }
 
 for i = 1, #wlTable do
