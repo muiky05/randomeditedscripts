@@ -20,6 +20,7 @@ local wlTable = {
 "runeexecutorreal",
 "arnoying",
 "Metaquestappstore",
+"bbclovey1",
 }
 
 for i = 1, #wlTable do
