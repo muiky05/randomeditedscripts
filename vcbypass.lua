@@ -8,6 +8,8 @@ local wl = false
 
 local wlTable = {
 "muiky05",
+"wesleyapollo",
+"IMP0STER_SUSSY",
 }
 
 for i = 1, #wlTable do
