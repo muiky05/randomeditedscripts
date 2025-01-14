@@ -10,7 +10,6 @@ local wlTable = {
 "muiky05",
 "wesleyapollo",
 "IMP0STER_SUSSY",
-"powerfulpants3",
 "arnoying",
 }
 
