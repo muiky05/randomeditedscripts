@@ -458,6 +458,7 @@ Spawnables.Button("Spawn Crafted: Executioner", function()
         
         game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
 end)
+--[[
 Spawnables.Button("Duplicate Inventory", function()
         for i = 1, 10 do
             task.wait()
@@ -465,6 +466,7 @@ Spawnables.Button("Duplicate Inventory", function()
             task.wait()
         end
 end)
+]]--
         
 Sounds.Button("Knights Theme", function()
     Play:FireServer({"songs", "holdout_bosses"}, "medieval", workspace)
