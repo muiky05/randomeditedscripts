@@ -11,7 +11,7 @@ local wlTable = {
 "wesleyapollo",
 "IMP0STER_SUSSY",
 "arnoying",
-"buritoking111",
+"Metaquestappstore",
 "LISTEN_NOOBY",
 }
 
