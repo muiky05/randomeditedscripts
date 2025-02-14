@@ -5,6 +5,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeT
 
 local LocalPlayer = Players.LocalPlayer
 local wl = false
+local VoiceToggle = false
 
 local wlTable = {
 "muiky05",
@@ -36,6 +37,14 @@ local Bypass = Sections.Home.Bypass
 
 Bypass.Button("Unban VC", function()
   VoiceChatService:joinVoice()
+end)
+
+Bypass.Toggle("Enable Voice Keybind", function()
+	VoiceToggle = not VoiceToggle
+end)
+
+Bypass.Textbox("Enable Voice Keybind", function()
+	
 end)
 
 Bypass.Label("Made by Keozog on Discord.")
