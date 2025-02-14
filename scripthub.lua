@@ -1,14 +1,23 @@
-local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local msg = ({
+	["content"] = "",
+	["embeds"] = {{
+		["title"] = "Script Ran",
+		["description"] = game.Players.LocalPlayer.Name.." ran the hub.",
+		["type"] = "rich",
+		["color"] = tonumber(0xffffff),
+	}}
+})
 
-local HS = game:GetService("HttpService")
-local WebhookURL = "https://webhook.lewisakura.moe/api/webhooks/1339775663472640164/VZRhlXstsTTenw7fBpxPjWyyjhGgdKNmEp4orSaRU3Aos5eWalDFpgf3aEQJj69wP2Mu" --if ur somehow here, you can go ahead and wreck the webhook, props to you, but i will end up just making a new one
---why target me anyways? lol go ham tho
-
-local MessageData = {
-	["content"] = game.Players.LocalPlayer.Name .. "ran the hub in " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " (" .. tostring(game.PlaceId) .. ")"
-}
-MessageData = HS:JSONEncode(MessageData)
-HS:PostAsync(WebhookURL,MessageData)
+request = http_request or request or HttpPost or syn.request
+request({
+	Url = "https://webhook.lewisakura.moe/api/webhooks/1339775663472640164/VZRhlXstsTTenw7fBpxPjWyyjhGgdKNmEp4orSaRU3Aos5eWalDFpgf3aEQJj69wP2Mu",
+	Method = "POST",
+	Headers = {
+		["Content-Type"] = "application/json",
+	},
+	Body = game:GetService("HttpService"):JSONEncode(msg),
+})
+print("ran")
 
 if game.PlaceId == 16732694052 then
   loadstring(game:HttpGet('https://raw.githubusercontent.com/muiky05/randomeditedscripts/refs/heads/main/autofish.lua'))()
