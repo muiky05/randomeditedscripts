@@ -53,10 +53,10 @@ Bypass.Toggle("Auto Unban", false, function(Bool)
 	AutoBypass = Bool
 end)
 
-Bypass.Label("Made by Keozog on Discord.")
-
 local thingy = true
 local FreeSpeak = Bypass.Label("FreeSpeak")
+
+Bypass.Label("Made by Keozog on Discord.")
 
 while task.wait(1) do
 	if freespeaktimer > 0 then
