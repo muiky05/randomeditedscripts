@@ -1,6 +1,6 @@
 --made by GhostExploits#3809
 --reason here
-local placeID = game.placeID
+local placeID = game.placeId
 _G.reason = "Exploiting Detected: https://roblox.com/games/" .. placeID
 --punishement type 
 --U can use Delete/Ban/Warn
