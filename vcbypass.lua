@@ -1,11 +1,15 @@
 local Players = game:GetService('Players')
 local VoiceChatService = game:GetService('VoiceChatService')
+local key = game:GetService("UserInputService")
+local vci = game:GetService("VoiceChatInternal")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 
 local LocalPlayer = Players.LocalPlayer
 local wl = false
-local VoiceToggle = false
+local AutoBypass = false
+local fakeSuspend = false
+local freespeaktimer = 0
 
 local wlTable = {
 "muiky05",
@@ -35,16 +39,38 @@ local Sections = {
 
 local Bypass = Sections.Home.Bypass
 
-Bypass.Button("Unban VC", function()
-  VoiceChatService:joinVoice()
+Bypass.Button("Unsuspend VC", function()
+	VoiceChatService:joinVoice()
+	fakeSuspend = false
 end)
 
-Bypass.Toggle("Enable Voice Keybind", function()
-	VoiceToggle = not VoiceToggle
+Bypass.Button("Fake Suspension", function()
+	vci:Leave()
+	fakeSuspend = true
 end)
 
-Bypass.Textbox("Enable Voice Keybind", function()
-	
+Bypass.Toggle("Auto Unban", false, function(Bool)
+	AutoBypass = Bool
 end)
 
 Bypass.Label("Made by Keozog on Discord.")
+
+local thingy = true
+local FreeSpeak = Bypass.Label("FreeSpeak")
+
+while task.wait(1) do
+	if freespeaktimer > 0 then
+		freespeaktimer -= 1
+	end
+	thingy = not thingy
+	FreeSpeak.UpdateLabel("Free Speak: " .. tostring(freespeaktimer))
+	if vci.VoiceChatState ~= Enum.VoiceChatState.Joined and vci.VoiceChatState ~= Enum.VoiceChatState.Joining then
+		if AutoBypass then
+			VoiceChatService:joinVoice()
+			fakeSuspend = false
+		end
+		if not fakeSuspend and freespeaktimer == 0 then
+			freespeaktimer = 300
+		end
+	end
+end
