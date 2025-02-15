@@ -93,7 +93,7 @@ while task.wait() do
 				if godcheck then
 					if Mouse.Target.Parent.Humanoid.Health ~= math.huge then
 						if friendcheck then
-							if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+							if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer.UserId) then
 								VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
 								wait(math.random(30, 60)/1000)
            							VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
@@ -106,7 +106,7 @@ while task.wait() do
 					end
 				else
 					if friendcheck then
-						if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+						if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer.UserId) then
 							VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
 							wait(math.random(30, 60)/1000)
            						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
@@ -122,7 +122,7 @@ while task.wait() do
 			if godcheck then
 				if Mouse.Target.Parent.Humanoid.Health ~= math.huge or not Mouse.Target.Parent:FindFirstChild("ForceField") then
 					if friendcheck then
-						if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+						if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer.UserId) then
 							VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
 							wait(math.random(30, 60)/1000)
            						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
@@ -135,7 +135,7 @@ while task.wait() do
 				end
 			else
 				if friendcheck then
-					if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+					if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer.UserId) then
 						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
 						wait(math.random(30, 60)/1000)
            					VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
