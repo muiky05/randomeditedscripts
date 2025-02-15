@@ -3,6 +3,9 @@ local Players = cloneref(game:GetService("Players"))
 local wlTable = {
 "muiky05",
 "bruh814653254",
+"MetaQuestappstore",
+"glupayeden",
+"emrahabot",
 }
 
 for i = 1, #wlTable do
