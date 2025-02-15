@@ -18,6 +18,8 @@ local wlTable = {
 "arnoying",
 "MetaQuestappstore",
 "LISTEN_NOOBY",
+"glupayeden",
+"emrahabot",
 }
 
 for i = 1, #wlTable do
