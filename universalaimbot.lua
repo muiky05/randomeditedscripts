@@ -1,5 +1,8 @@
 local Players = cloneref(game:GetService("Players"))
 
+--[[
+local wl = false
+
 local wlTable = {
 "muiky05",
 "bruh814653254",
@@ -14,6 +17,7 @@ for i = 1, #wlTable do
 	end
 end
 if wl == false then Players.LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") end
+]]
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
 local VirtualInputManager = cloneref(game:GetService("VirtualInputManager"))
