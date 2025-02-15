@@ -16,7 +16,6 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeT
 local VirtualInputManager = cloneref(game:GetService("VirtualInputManager"))
 repeat task.wait() until Players.LocalPlayer.Character
 local CharacterFolder = Players.LocalPlayer.Character.Parent
-print(CharacterFolder)
 local Main = Library:Create("Main")
 local TabH = Main.MakeTab("Ernads Universal Aimbot - Welcome, "..Players.LocalPlayer.Name, 6023426922)
 
@@ -55,14 +54,13 @@ end)
 ESP.Label("Made by Keozog on Discord.")
 TriggerBot.Label("Made by Keozog on Discord.")
 
-while task.wait(0.1) do
+while task.wait() do
 	local Mouse = Players.LocalPlayer:GetMouse()
 	for i, v in CharacterFolder:GetChildren() do
-		if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and Players.LocalPlayer:FindFirstChild("Character") and Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+		if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
 			local dist = (v.HumanoidRootPart.Position - Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
 			if isEsping and not v:FindFirstChild("Highlight") and dist < maxdist and v.Name ~= Players.LocalPlayer.Character.Name then
 				local Highlight = Instance.new("Highlight")
-				Highlight.Name = "ESPHighlight"
 				Highlight.FillTransparency = 1
 				if Players:FindFirstChild(v.Name).Team then
 					Highlight.OutlineColor = Players:FindFirstChild(v.Name).Team.TeamColor.Color
@@ -105,11 +103,6 @@ while task.wait(0.1) do
 				wait(math.random(30, 60)/1000)
            		VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
 			end
-		end
-	end
-	for i, v in game:GetDescendants() do
-		if v:IsA("Highlight") and v.Name ~= "ESPHighlight" then
-			v:Destroy()
 		end
 	end
 end
