@@ -38,6 +38,7 @@ local isEsping = false
 local triggering = false
 local teamcheck = false
 local godcheck = false
+local friendcheck = false
 
 local ESP = Sections.Home.ESP
 local TriggerBot = Sections.Home.TriggerBot
@@ -56,6 +57,9 @@ TriggerBot.Toggle("Team Check", false, function(Bool)
 end)
 TriggerBot.Toggle("God Check", false, function(Bool)
 	teamcheck = Bool
+end)
+TriggerBot.Toggle("Friend Check", false, function(Bool)
+	friendcheck = Bool
 end)
 
 ESP.Label("Made by Keozog on Discord.")
@@ -88,27 +92,59 @@ while task.wait() do
 			if Players:FindFirstChild(Mouse.Target.Parent.Name).Team ~= Players.LocalPlayer.Team then
 				if godcheck then
 					if Mouse.Target.Parent.Humanoid.Health ~= math.huge then
-						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
-						wait(math.random(30, 60)/1000)
-           				VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+						if friendcheck then
+							if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+								VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+								wait(math.random(30, 60)/1000)
+           							VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+							end
+						else
+							VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+							wait(math.random(30, 60)/1000)
+           						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+						end
 					end
 				else
-					VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
-					wait(math.random(30, 60)/1000)
-           			VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+					if friendcheck then
+						if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+							VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+							wait(math.random(30, 60)/1000)
+           						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+						end
+					else
+						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+						wait(math.random(30, 60)/1000)
+           					VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+					end
 				end
 			end
 		else
 			if godcheck then
 				if Mouse.Target.Parent.Humanoid.Health ~= math.huge or not Mouse.Target.Parent:FindFirstChild("ForceField") then
-					VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
-					wait(math.random(30, 60)/1000)
-           			VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+					if friendcheck then
+						if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+							VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+							wait(math.random(30, 60)/1000)
+           						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+						end
+					else
+						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+						wait(math.random(30, 60)/1000)
+           					VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+					end
 				end
 			else
-				VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
-				wait(math.random(30, 60)/1000)
-           		VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+				if friendcheck then
+					if game.Players:FindFirstChild(Mouse.Target.Parent.Name):IsFriendsWith(game.Players.LocalPlayer) then
+						VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+						wait(math.random(30, 60)/1000)
+           					VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+					end
+				else
+					VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, true, game, 1)
+					wait(math.random(30, 60)/1000)
+           				VirtualInputManager:SendMouseButtonEvent(Mouse.X, Mouse.Y, 0, false, game, 1)
+				end
 			end
 		end
 	end
