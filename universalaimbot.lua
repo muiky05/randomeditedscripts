@@ -78,7 +78,7 @@ while task.wait(0.1) do
 			end
 		end
 	end
-	if Mouse and Mouse.Target and triggering and Mouse.Target.Parent:FindFirstChild('Humanoid') and Mouse.Target.Parent.Humanoid.Health > 0 and then
+	if Mouse and Mouse.Target and triggering and Mouse.Target.Parent:FindFirstChild('Humanoid') and Mouse.Target.Parent.Humanoid.Health > 0 then
 		if teamcheck then
 			if Players:FindFirstChild(Mouse.Target.Parent.Name).Team ~= Players.LocalPlayer.Team then
 				if godcheck then
