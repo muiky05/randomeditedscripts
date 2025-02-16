@@ -29,41 +29,57 @@ local TabH = Main.MakeTab("Ernads Universal Aimbot - Welcome, "..Players.LocalPl
 local Sections = {
     ['Home'] = {
         ESP = TabH.MakeSection("ESP"),
-		TriggerBot = TabH.MakeSection("TriggerBot")
+	Aimbot = TabH.MakeSection("Aimbot")
     },
 }
 
 local maxdist = 0
 local isEsping = false
+local tween = nil
 local triggering = false
+local aimbotting = false
 local teamcheck = false
 local godcheck = false
 local friendcheck = false
+local aimpart = Enum.Keycode.MouseRightButton
 
 local ESP = Sections.Home.ESP
-local TriggerBot = Sections.Home.TriggerBot
+local Aimbot = Sections.Home.Aimbot
 
 ESP.Toggle("Toggle ESP", false, function(Bool)
-    isEsping = Bool
+	isEsping = Bool
 end)
 ESP.Slider("Max ESP Distance", 0, 2500, 0, function(Int)
-    maxdist = Int
+	maxdist = Int
 end)
-TriggerBot.Toggle("Trigger-Bot", false, function(Bool)
+Aimbot.Toggle("Aim-Bot", false, function(Bool)
+	aimbotting = Bool
+end)
+Aimbot.Toggle("Trigger-Bot", false, function(Bool)
 	triggering = Bool
 end)
-TriggerBot.Toggle("Team Check", false, function(Bool)
+Info.Dropdown("Aim Part", {"Head", "HumanoidRootPart"}, function(String)
+	aimpart = String
+end)
+Info.Textbox("Aim Key", function(String)
+	if Enum.Keycode[String] then
+		aimpart = Enum.Keycode[String]
+	end
+end)
+Aimbot.Toggle("Team Check", false, function(Bool)
 	teamcheck = Bool
 end)
-TriggerBot.Toggle("God Check", false, function(Bool)
+Aimbot.Toggle("God Check", false, function(Bool)
 	teamcheck = Bool
 end)
-TriggerBot.Toggle("Friend Check", false, function(Bool)
+Aimbot.Toggle("Friend Check", false, function(Bool)
 	friendcheck = Bool
 end)
 
 ESP.Label("Made by Keozog on Discord.")
-TriggerBot.Label("Made by Keozog on Discord.")
+Aimbot.Label("Aimbot doesn't shoot for you!")
+Aimbot.Label("You can combine both bots to achieve this.")
+Aimbot.Label("Made by Keozog on Discord.")
 
 while task.wait() do
 	local Mouse = Players.LocalPlayer:GetMouse()
