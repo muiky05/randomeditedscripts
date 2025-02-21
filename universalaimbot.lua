@@ -41,7 +41,7 @@ local aimbotting = false
 local teamcheck = false
 local godcheck = false
 local friendcheck = false
-local aimpart = Enum.Keycode.MouseRightButton
+--local aimpart = Enum.Keycode.MouseRightButton
 
 local ESP = Sections.Home.ESP
 local Aimbot = Sections.Home.Aimbot
@@ -52,12 +52,15 @@ end)
 ESP.Slider("Max ESP Distance", 0, 2500, 0, function(Int)
 	maxdist = Int
 end)
+--[[
 Aimbot.Toggle("Aim-Bot", false, function(Bool)
 	aimbotting = Bool
 end)
+]]
 Aimbot.Toggle("Trigger-Bot", false, function(Bool)
 	triggering = Bool
 end)
+--[[
 Info.Dropdown("Aim Part", {"Head", "HumanoidRootPart"}, function(String)
 	aimpart = String
 end)
@@ -66,6 +69,7 @@ Info.Textbox("Aim Key", function(String)
 		aimpart = Enum.Keycode[String]
 	end
 end)
+]]
 Aimbot.Toggle("Team Check", false, function(Bool)
 	teamcheck = Bool
 end)
@@ -77,8 +81,10 @@ Aimbot.Toggle("Friend Check", false, function(Bool)
 end)
 
 ESP.Label("Made by Keozog on Discord.")
+--[[
 Aimbot.Label("Aimbot doesn't shoot for you!")
 Aimbot.Label("You can combine both bots to achieve this.")
+]]
 Aimbot.Label("Made by Keozog on Discord.")
 
 while task.wait() do
