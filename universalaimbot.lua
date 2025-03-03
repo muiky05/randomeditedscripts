@@ -16,7 +16,7 @@ for i = 1, #wlTable do
 		wl = true
 	end
 end
-if wl == false then Players.LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") end
+if wl == false then Players.LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") return end
 ]]
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Uncategorized-Scripts/main/UI-Libraries/Bloom/UI.lua"))()
