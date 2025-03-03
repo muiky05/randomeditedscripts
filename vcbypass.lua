@@ -21,6 +21,7 @@ local wlTable = {
 "glupayeden",
 "emrahabot",
 "Jeroparri850",
+"4e014",
 }
 
 for i = 1, #wlTable do
