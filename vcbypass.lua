@@ -27,7 +27,7 @@ for i = 1, #wlTable do
 		wl = true
 	end
 end
-if wl == false then LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") end
+if wl == false then LocalPlayer:Kick("You are not whitelisted. Contact me if this is a mistake.") return end
 
 local Main = Library:Create("Ernads VC Bypasser")
 local TabH = Main.MakeTab("Ernads VC Bypasser - Welcome, "..LocalPlayer.Name, 6023426922)
