@@ -20,8 +20,8 @@ local wlTable = {
 "LISTEN_NOOBY",
 "glupayeden",
 "emrahabot",
-"Jeroparri850",
 "4e014",
+"maxfoss",
 }
 
 for i = 1, #wlTable do
