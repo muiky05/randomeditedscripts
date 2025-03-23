@@ -22,7 +22,16 @@ local wlTable = {
 "emrahabot",
 "4e014",
 "maxfoss",
-"xim_1b",
+"obamargaming_1",
+"obamargaming_2",
+"obamargaming_3",
+"obamargaming_4",
+"obamargaming_5",
+"obamargaming_6",
+"obamargaming_7",
+"obamargaming_8",
+"obamargaming_9",
+"obamargaming_10",
 }
 
 for i = 1, #wlTable do
