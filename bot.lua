@@ -29,7 +29,7 @@ end
 
 local whitelisted = {
 	bot.Name,
-	ownerName
+	"muiky05"
 }
 
 
