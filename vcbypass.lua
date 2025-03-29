@@ -32,6 +32,7 @@ local wlTable = {
 "obamargaming_8",
 "obamargaming_9",
 "obamargaming_10",
+"uuuuuuiiiiipoooop",
 }
 
 for i = 1, #wlTable do
