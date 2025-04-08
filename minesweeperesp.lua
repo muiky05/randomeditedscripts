@@ -1,3 +1,4 @@
+--[[
 local Workspace = game:FindFirstChildOfClass("Workspace")
 
 local offsets = {
@@ -10,6 +11,8 @@ local offsets = {
 	Vector3.new(-5, 0, 5),
 	Vector3.new(-5, 0, -5),
 }
+
+
 
 local function vecToKey(vec)
 	return string.format("%0.1f,%0.1f,%0.1f", vec.X, vec.Y, vec.Z)
@@ -73,3 +76,4 @@ task.spawn(function()
 		end
 	end
 end)
+]]
