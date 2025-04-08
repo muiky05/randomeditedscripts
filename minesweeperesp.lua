@@ -1,4 +1,3 @@
---[[
 local Workspace = game:FindFirstChildOfClass("Workspace")
 
 local offsets = {
@@ -76,4 +75,3 @@ task.spawn(function()
 		end
 	end
 end)
-]]
